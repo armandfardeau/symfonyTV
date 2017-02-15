@@ -1,24 +1,65 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/security.html
 security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
 
-    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    role_hierarchy:
+        ROLE_USER:        [ROLE_USER]
+        ROLE_ADMIN:       [ROLE_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
     providers:
-        in_memory:
-            memory: ~
+        fos_userbundle:
+            id: fos_user.user_provider.username_email
 
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        # login area for backoffice users
+        backoffice:
+            context: primary_auth
+            pattern:            ^/admin
+            form_login:
+                provider:       fos_userbundle
+                login_path:     sf_web_app_back_office_security_login
+                use_forward:    true
+                use_referer:    true
+                check_path:     sf_web_app_back_office_security_check
+                failure_path:   sf_web_app_back_office_bundle_admin_index
+                default_target_path: sf_web_app_back_office_bundle_admin_index
+            logout:
+                path: sf_web_app_back_office_security_logout
+                target: sf_web_app_cms_bundle_homepage
+            anonymous:    true
+
+        # defaut login area for standard users
         main:
-            anonymous: ~
-            # activate different ways to authenticate
+            context: primary_auth
+            pattern:            ^/
+            form_login:
+                provider:       fos_userbundle
+                login_path:     fos_user_security_login
+                use_forward:    true
+                use_referer:    true
+                check_path:     fos_user_security_check
+                #failure_path:   null
+                default_target_path: fos_user_profile_show
+            logout:
+                path: fos_user_security_logout
+                target: sf_web_app_cms_bundle_homepage
+            anonymous:    true
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+    access_control:
+        # back-office
 
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+        - { path: ^/admin/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/private-space, roles: ROLE_USER }
+        # front-office
+        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/connexion, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/inscription, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/mot-de-passe-oublie, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/profile, role: IS_AUTHENTICATED_FULLY }
+        - { path: ^/deconnexion$, role: IS_AUTHENTICATED_FULLY }
