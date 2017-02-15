@@ -1,0 +1,16 @@
+{% extends 'SfWebAppFrontOfficeBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{ 'reset_password'|trans }}</h2>
+                </div>
+                <div class="panel-body">
+                    <p>{{ 'resetting.check_email'|trans({'%email%': email}, 'FOSUserBundle') }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
