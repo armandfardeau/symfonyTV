@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new SfWebApp\CmsBundle\SfWebAppCmsBundle(),
             //bundle for securely loads users
             new FOS\UserBundle\FOSUserBundle(),
+            //assetic bundle use for assets delivery
+            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

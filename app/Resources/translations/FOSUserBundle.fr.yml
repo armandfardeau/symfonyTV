@@ -1,0 +1,34 @@
+profile:
+    fields:
+        gender: Civilité
+        firstname: Prénom
+        lastname: Nom
+        address: Adresse
+        zip_code: Code postal
+        phone: Tél.
+        email: E-mail
+        password_first: Mot de passe
+        password_second: Mot de passe (validation)
+
+register:
+    fields:
+        firstname: Nom
+
+# Resetting account
+resetting:
+    email:
+        subject: |
+            Réinitialisation de votre mot de passe
+        message:  |
+            <p>Pour réinitialiser votre mot de passe, merci de cliquer sur le lien suivant :</p>
+            <p><a href="%confirmationUrl%">%confirmationUrl%</a></p>
+
+# Registration
+registration:
+    confirmed: Votre compte est maintenant activé.
+    email:
+        subject: |
+            Confirmation de l'inscription
+        message:  |
+            <p>Pour valider votre compte utilisateur, merci de vous rendre sur :</p>
+            <p><a href="%confirmationUrl%">%confirmationUrl%</a></p>
