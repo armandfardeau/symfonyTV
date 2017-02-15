@@ -8,4 +8,4 @@ fos_user_profile_edit:
     path: /profile/editer
     defaults: { _controller: FoulquierInfoFrontOfficeBundle:Profile:edit }
     requirements:
-      methods: [GET|POST]
+      methods: GET|POST

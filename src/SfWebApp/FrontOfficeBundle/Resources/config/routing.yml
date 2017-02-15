@@ -4,4 +4,4 @@ sf_web_app_front_office_homepage:
 
 # SECURITY
 sf_web_app_front_office_security:
-    resource: « @SfWebAppFrontOfficeBundle/Resources/config/routing/security.yml"
+    resource: "@SfWebAppFrontOfficeBundle/Resources/config/routing/security.yml"

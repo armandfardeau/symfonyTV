@@ -1,14 +1,14 @@
 # APP BUNDLES
 sf_web_app_cms:
-    resource: « @SfWebAppCmsBundle/Resources/config/routing.yml"
+    resource: "@SfWebAppCmsBundle/Resources/config/routing.yml"
     prefix:   /
 
 sf_web_app_back_office:
-    resource: « @SfWebAppBackOfficeBundle/Resources/config/routing.yml"
+    resource: "@SfWebAppBackOfficeBundle/Resources/config/routing.yml"
     prefix:   /admin
 
 sf_web_app_front_office:
-    resource: « @SfWebAppFrontOfficeBundle/Resources/config/routing.yml"
+    resource: "@SfWebAppFrontOfficeBundle/Resources/config/routing.yml"
     prefix:   /private-space
 
 sf_web_app_main:
