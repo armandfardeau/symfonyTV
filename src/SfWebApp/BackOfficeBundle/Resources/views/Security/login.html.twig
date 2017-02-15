@@ -1,0 +1,34 @@
+{% extends 'SfWebAppBackOfficeBundle::layout-login.html.twig' %}
+
+{% block content %}
+
+    <div id="layout-view" class="view view-login">
+        {% if error %}
+            <div class="bg-danger">{{ error|trans({}, 'FOSUserBundle') }}</div>
+        {% endif %}
+        <div id="login-form" class="col-md-4 col-md-offset-4">
+
+            <h1 class="text-center">Blog Test</h1>
+
+            <form action="{{ path("sf_web_app_back_office_security_check") }}" method="post" class="center-block">
+
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                <div class="form-group">
+                    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="{{ 'email_address'|trans }}"/>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" id="password" name="_password" required="required" placeholder="{{ 'password'|trans }}"/>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                    <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                </div>
+
+                <input class="btn btn-primary btn-block" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
