@@ -1,3 +1,7 @@
-sf_web_app_back_office_homepage:
-    path:     /
-    defaults: { _controller: SfWebAppBackOfficeBundle:Default:index }
+# SECURITY
+sf_web_app_back_office_security:
+    resource: "@SfWebAppBackOfficeBundle/Resources/config/routing/security.yml"
+
+# BACKOFFICE
+sf_web_app_back_office_bo:
+    resource: "@SfWebAppBackOfficeBundle/Resources/config/routing/backoffice.yml"
