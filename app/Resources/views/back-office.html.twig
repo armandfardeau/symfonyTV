@@ -4,18 +4,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>{% block title %}Back-Office Blog Test{% endblock %}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     {% block stylesheets %}
-
         {% stylesheets filter='cssrewrite'
         '@SfWebAppBackOfficeBundle/Resources/public/css/libs/bootstrap.min.css'
         '@SfWebAppBackOfficeBundle/Resources/public/css/libs/bootstrap-theme.min.css'
         '@SfWebAppBackOfficeBundle/Resources/public/css/libs/jquery-ui.min.css'
         '@SfWebAppBackOfficeBundle/Resources/public/css/libs/jquery-ui.structure.min.css'
         '@SfWebAppBackOfficeBundle/Resources/public/css/libs/backoffice.css' %}
-        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
         {% endstylesheets %}
 
     {% endblock %}
@@ -54,14 +53,12 @@
 </div>
 
 {% block javascripts %}
-
     {% javascripts
     '@SfWebAppBackOfficeBundle/Resources/public/js/libs/jquery-1.10.1.min.js'
     '@SfWebAppBackOfficeBundle/Resources/public/js/libs/jquery-ui.min.js'
     '@SfWebAppBackOfficeBundle/Resources/public/js/libs/bootstrap.min.js' %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
-
     <script>
         // get locale
         locale = "{{ app.request.locale }}";
