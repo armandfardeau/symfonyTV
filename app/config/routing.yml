@@ -1,3 +1,19 @@
+sf_web_app_cms:
+    resource: "@SfWebAppCmsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sf_web_app_front_office:
+    resource: "@SfWebAppFrontOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sf_web_app_back_office:
+    resource: "@SfWebAppBackOfficeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+sf_web_app_main:
+    resource: "@SfWebAppMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation

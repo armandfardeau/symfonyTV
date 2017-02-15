@@ -1,0 +1,3 @@
+sf_web_app_back_office_homepage:
+    path:     /
+    defaults: { _controller: SfWebAppBackOfficeBundle:Default:index }
