@@ -1,0 +1,17 @@
+profile:
+    fields:
+        gender: Civilité
+        firstname: Prénom
+        lastname: Nom
+        address: Adresse
+        city: Ville
+        country: Pays
+        zip_code: Code postal
+        phone: Téléphone
+        email: E-mail
+        password_first: Mot de passe
+        password_second: Mot de passe (validation)
+
+register:
+    fields:
+        firstname: Nom

@@ -32,3 +32,4 @@ registration:
         message:  |
             <p>Pour valider votre compte utilisateur, merci de vous rendre sur :</p>
             <p><a href="%confirmationUrl%">%confirmationUrl%</a></p>
+
