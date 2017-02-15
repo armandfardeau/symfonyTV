@@ -108,7 +108,7 @@ class Requirement
 }
 
 /**
- * Represents a PHP requirement in form of a php.ini configuration.
+ * Represents a PHP requirement in Form of a php.ini configuration.
  *
  * @author Tobias Schultze <http://tobion.de>
  */
@@ -220,7 +220,7 @@ class RequirementCollection implements IteratorAggregate
     }
 
     /**
-     * Adds a mandatory requirement in form of a php.ini configuration.
+     * Adds a mandatory requirement in Form of a php.ini configuration.
      *
      * @param string        $cfgName           The configuration name used for ini_get()
      * @param bool|callback $evaluation        Either a boolean indicating whether the configuration should evaluate to true or false,
@@ -238,7 +238,7 @@ class RequirementCollection implements IteratorAggregate
     }
 
     /**
-     * Adds an optional recommendation in form of a php.ini configuration.
+     * Adds an optional recommendation in Form of a php.ini configuration.
      *
      * @param string        $cfgName           The configuration name used for ini_get()
      * @param bool|callback $evaluation        Either a boolean indicating whether the configuration should evaluate to true or false,
