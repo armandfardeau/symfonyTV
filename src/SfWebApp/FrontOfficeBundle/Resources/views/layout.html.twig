@@ -1,0 +1,55 @@
+{% extends '::front-office.html.twig' %}
+
+{% block header %}
+
+    <nav class="navbar navbar-default main-nav">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="" data-toggle="dropdown">{{ app.user.firstname }} {{ app.user.lastname }} <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="{{ path('fos_user_profile_show') }}">{{ 'my_account'|trans }}</a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('fos_user_security_logout') }}">{{ 'logout'|trans }}</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                {% else %}
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="">{{ 'sf_web_app'|trans }}</a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+    </nav>
+
+{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}{% endblock %}
