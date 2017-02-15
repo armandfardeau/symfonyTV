@@ -1,0 +1,24 @@
+{% extends 'SfWebAppFrontOfficeBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{ 'profile'|trans }}</h2>
+                </div>
+                <div class="panel-body">
+                    <p>Nom d'utilisateur : {{ app.user.username }}</p>
+                    <p>Prénom : {{ app.user.firstname }}</p>
+                    <p>Nom : {{ app.user.lastname }}</p>
+                    <p>CP : {{ app.user.zipCode }}</p>
+                    <p>Ville : {{ app.user.city }}</p>
+                    <p>Pays : {{ app.user.country }}</p>
+                    <p>Tel. : {{ app.user.phone }}</p>
+                    <p>Adresse e-mail : {{ app.user.email }}</p>
+                    <a href="{{ path('fos_user_profile_edit') }}" class="btn btn-primary">{{ 'edit' }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
