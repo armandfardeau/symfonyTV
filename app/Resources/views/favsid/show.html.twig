@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Favsid</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ favsId.id }}</td>
+            </tr>
+            <tr>
+                <th>Uuid</th>
+                <td>{{ favsId.uuid }}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ favsId.userId }}</td>
+            </tr>
+            <tr>
+                <th>Videoid</th>
+                <td>{{ favsId.videoId }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('favsid_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('favsid_edit', { 'id': favsId.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

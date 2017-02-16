@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Video</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ video.id }}</td>
+            </tr>
+            <tr>
+                <th>Uuid</th>
+                <td>{{ video.uuid }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ video.title }}</td>
+            </tr>
+            <tr>
+                <th>Channel</th>
+                <td>{{ video.channel }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if video.date %}{{ video.date|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Timestart</th>
+                <td>{% if video.timeStart %}{{ video.timeStart|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Timeend</th>
+                <td>{% if video.timeEnd %}{{ video.timeEnd|date('H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ video.category }}</td>
+            </tr>
+            <tr>
+                <th>Excerpt</th>
+                <td>{{ video.excerpt }}</td>
+            </tr>
+            <tr>
+                <th>Thumbnail</th>
+                <td>{{ video.thumbnail }}</td>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <td>{{ video.url }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('videos_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('videos_edit', { 'id': video.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

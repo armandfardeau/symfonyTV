@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Channel</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ channel.id }}</td>
+            </tr>
+            <tr>
+                <th>Uuid</th>
+                <td>{{ channel.uuid }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ channel.title }}</td>
+            </tr>
+            <tr>
+                <th>Cssclass</th>
+                <td>{{ channel.cssClass }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('channels_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('channels_edit', { 'id': channel.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

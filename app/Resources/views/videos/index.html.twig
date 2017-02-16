@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Videos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uuid</th>
+                <th>Title</th>
+                <th>Channel</th>
+                <th>Date</th>
+                <th>Timestart</th>
+                <th>Timeend</th>
+                <th>Category</th>
+                <th>Excerpt</th>
+                <th>Thumbnail</th>
+                <th>Url</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for video in videos %}
+            <tr>
+                <td><a href="{{ path('videos_show', { 'id': video.id }) }}">{{ video.id }}</a></td>
+                <td>{{ video.uuid }}</td>
+                <td>{{ video.title }}</td>
+                <td>{{ video.channel }}</td>
+                <td>{% if video.date %}{{ video.date|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if video.timeStart %}{{ video.timeStart|date('H:i:s') }}{% endif %}</td>
+                <td>{% if video.timeEnd %}{{ video.timeEnd|date('H:i:s') }}{% endif %}</td>
+                <td>{{ video.category }}</td>
+                <td>{{ video.excerpt }}</td>
+                <td>{{ video.thumbnail }}</td>
+                <td>{{ video.url }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('videos_show', { 'id': video.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('videos_edit', { 'id': video.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('videos_new') }}">Create a new video</a>
+        </li>
+    </ul>
+{% endblock %}
