@@ -6,6 +6,6 @@ sf_web_app_front_office:
 sf_web_app_main:
     resource: "@SfWebAppMainBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /admin
 
 
