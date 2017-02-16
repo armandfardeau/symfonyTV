@@ -8,9 +8,14 @@
     <title>{% block title %}Back-Office Blog Test{% endblock %}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     {% block stylesheets %}
+
         {% stylesheets filter='cssrewrite'
-        '@SfWebAppBackOfficeBundle/Resources/public/css/libs/backoffice.css' %}
-        <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+        '@SfWebAppBackOfficeBundle/Resources/public/css/libs/bootstrap.min.css'
+        '@SfWebAppBackOfficeBundle/Resources/public/css/libs/bootstrap-theme.min.css'
+        '@SfWebAppBackOfficeBundle/Resources/public/css/libs/jquery-ui.min.css'
+        '@SfWebAppBackOfficeBundle/Resources/public/css/libs/jquery-ui.structure.min.css'
+        '@SfWebAppBackOfficeBundle/Resources/public/css/backoffice.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
         {% endstylesheets %}
 
     {% endblock %}
@@ -50,7 +55,7 @@
 
 {% block javascripts %}
     {% javascripts
-    '@SfWebAppBackOfficeBundle/Resources/public/js/libs/backoffice.js' %}
+    '@SfWebAppBackOfficeBundle/Resources/public/js/backoffice.js' %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
     <script>
