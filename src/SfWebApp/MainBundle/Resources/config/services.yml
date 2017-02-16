@@ -1,0 +1,4 @@
+services:
+#    sf_web_app_main.example:
+#        class: SfWebApp\MainBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
