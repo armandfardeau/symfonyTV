@@ -1,0 +1,40 @@
+{# add navigation current nav mark #}
+{% set route = app.request.get('_route') %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Front-Office D&i{% endblock %}</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    {% block stylesheets %}
+
+        {% stylesheets filter='cssrewrite'
+        '@SfWebAppCmsBundle/Resources/public/css/cms.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css"/>
+        {% endstylesheets %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    {% block nav %}
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock footer %}
+</div>
+{% block javascripts %}
+    {% javascripts
+    '@SfWebAppCmsBundle/Resources/public/js/cms.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script>
+        // get locale
+        locale = "{{ app.request.locale }}";
+        // get route
+        route = "{{ route }}";
+    </script>
+{% endblock %}
+
+</body>
+</html>
