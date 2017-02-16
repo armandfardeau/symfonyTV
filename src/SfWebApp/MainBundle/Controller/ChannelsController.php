@@ -39,7 +39,7 @@ class ChannelsController extends Controller
      */
     public function newAction(Request $request)
     {
-        $channel = new Channel();
+        $channel = new Channels();
         $form = $this->createForm('SfWebApp\MainBundle\Form\ChannelsType', $channel);
         $form->handleRequest($request);
 
