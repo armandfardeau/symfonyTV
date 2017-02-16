@@ -3,6 +3,4 @@ sf_web_app_main:
     type:     annotation
     prefix:   /
 
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+
