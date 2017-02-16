@@ -12,6 +12,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $channels = $em->getRepository('SfWebAppMainBundle:Channels')->findAll();
+
+        return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig', array(
+            'channels' => $channels,
+        ));
     }
 }
