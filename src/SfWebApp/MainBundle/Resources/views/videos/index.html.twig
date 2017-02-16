@@ -7,7 +7,6 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Uuid</th>
                 <th>Title</th>
                 <th>Channel</th>
                 <th>Date</th>
@@ -24,7 +23,6 @@
         {% for video in videos %}
             <tr>
                 <td><a href="{{ path('videos_show', { 'id': video.id }) }}">{{ video.id }}</a></td>
-                <td>{{ video.uuid }}</td>
                 <td>{{ video.title }}</td>
                 <td>{{ video.channel }}</td>
                 <td>{% if video.date %}{{ video.date|date('Y-m-d') }}{% endif %}</td>
