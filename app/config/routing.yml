@@ -1,3 +1,8 @@
+sf_web_app_back_office:
+    resource: "@SfWebAppBackOfficeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 sf_web_app_front_office:
     resource: "@SfWebAppFrontOfficeBundle/Controller/"
     type:     annotation
