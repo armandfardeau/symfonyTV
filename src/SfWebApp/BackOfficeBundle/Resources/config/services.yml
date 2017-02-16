@@ -1,4 +1,0 @@
-services:
-#    sf_web_app_back_office.example:
-#        class: SfWebApp\BackOfficeBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,9 +1,0 @@
-sf_web_app_backofficebundle_home:
-    path: /
-    defaults: { _controller: "SfWebAppBackOfficeBundle:Default:index" }
-    requirements:
-
-sf_web_app_backofficebundle_add:
-    path: /add
-    defaults: { _controller: "SfWebAppBackOfficeBundle:Default:add" }
-    requirements:

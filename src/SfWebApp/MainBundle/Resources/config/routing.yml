@@ -1,3 +1,0 @@
-sf_web_app_main_homepage:
-    path:     /
-    defaults: { _controller: SfWebAppMainBundle:Default:index }
