@@ -1,0 +1,4 @@
+services:
+#    sf_web_app_front_office.example:
+#        class: SfWebApp\FrontOfficeBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
