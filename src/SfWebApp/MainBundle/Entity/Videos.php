@@ -11,12 +11,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Class Video
+ * Class videos
  * @package SfWebApp\MainBundle\Entity
- * @ORM\Table(name="video")
+ * @ORM\Table(name="videos")
  * @ORM\Entity
  */
-class Video
+class Videos
 {
 
     /**
@@ -38,7 +38,7 @@ class Video
     /**
      * @var
      *
-     * @ORM\ManyToMany(targetEntity="Categories", inversedBy="Video")
+     * @ORM\ManyToMany(targetEntity="Categories", inversedBy="videos")
      * @ORM\JoinTable(name="video_categories",
      *      joinColumns={@ORM\JoinColumn(name="video_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="categories_id", referencedColumnName="id")}
