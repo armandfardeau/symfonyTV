@@ -39,7 +39,7 @@ class VideosController extends Controller
      */
     public function newAction(Request $request)
     {
-        $video = new Video();
+        $video = new Videos();
         $form = $this->createForm('SfWebApp\MainBundle\Form\VideosType', $video);
         $form->handleRequest($request);
 
