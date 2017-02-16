@@ -57,7 +57,7 @@ class Videos
     private $timeEnd;
 
     /**
-     * @var int
+     * @var string
      *
      * @ORM\Column(name="category", type="integer", nullable=true)
      */
