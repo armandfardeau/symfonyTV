@@ -1,17 +1,19 @@
 {% extends '::base.html.twig' %}
 
+
 {% block body %}
+    {{ include('@SfWebAppMain/menu.html.twig') }}
     <h1>Channels list</h1>
 
     <table>
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Uuid</th>
-                <th>Title</th>
-                <th>Cssclass</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Uuid</th>
+            <th>Title</th>
+            <th>Cssclass</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for channel in channels %}
