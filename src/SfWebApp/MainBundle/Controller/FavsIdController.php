@@ -26,7 +26,7 @@ class FavsIdController extends Controller
 
         $favsIds = $em->getRepository('SfWebAppMainBundle:FavsId')->findAll();
 
-        return $this->render('favsid/index.html.twig', array(
+        return $this->render('SfWebAppMainBundle:favsid:index.html.twig', array(
             'favsIds' => $favsIds,
         ));
     }
@@ -51,7 +51,7 @@ class FavsIdController extends Controller
             return $this->redirectToRoute('favsid_show', array('id' => $favsId->getId()));
         }
 
-        return $this->render('favsid/new.html.twig', array(
+        return $this->render('SfWebAppMainBundle:favsid:new.html.twig', array(
             'favsId' => $favsId,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class FavsIdController extends Controller
     {
         $deleteForm = $this->createDeleteForm($favsId);
 
-        return $this->render('favsid/show.html.twig', array(
+        return $this->render('SfWebAppMainBundle:favsid:show.html.twig', array(
             'favsId' => $favsId,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class FavsIdController extends Controller
             return $this->redirectToRoute('favsid_edit', array('id' => $favsId->getId()));
         }
 
-        return $this->render('favsid/edit.html.twig', array(
+        return $this->render('SfWebAppMainBundle:favsid:edit.html.twig', array(
             'favsId' => $favsId,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

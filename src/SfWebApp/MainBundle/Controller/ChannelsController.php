@@ -26,7 +26,7 @@ class ChannelsController extends Controller
 
         $channels = $em->getRepository('SfWebAppMainBundle:Channels')->findAll();
 
-        return $this->render('channels/index.html.twig', array(
+        return $this->render('SfWebAppMainBundle:channels:index.html.twig', array(
             'channels' => $channels,
         ));
     }
@@ -51,7 +51,7 @@ class ChannelsController extends Controller
             return $this->redirectToRoute('channels_show', array('id' => $channel->getId()));
         }
 
-        return $this->render('channels/new.html.twig', array(
+        return $this->render('SfWebAppMainBundle:channels:new.html.twig', array(
             'channel' => $channel,
             'form' => $form->createView(),
         ));
@@ -91,7 +91,7 @@ class ChannelsController extends Controller
             return $this->redirectToRoute('channels_edit', array('id' => $channel->getId()));
         }
 
-        return $this->render('channels/edit.html.twig', array(
+        return $this->render('SfWebAppMainBundle:channels:edit.html.twig', array(
             'channel' => $channel,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

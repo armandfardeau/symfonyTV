@@ -26,7 +26,7 @@ class VideosController extends Controller
 
         $videos = $em->getRepository('SfWebAppMainBundle:Videos')->findAll();
 
-        return $this->render('videos/index.html.twig', array(
+        return $this->render('SfWebAppMainBundle:videos:index.html.twig', array(
             'videos' => $videos,
         ));
     }
@@ -51,7 +51,7 @@ class VideosController extends Controller
             return $this->redirectToRoute('videos_show', array('id' => $video->getId()));
         }
 
-        return $this->render('videos/new.html.twig', array(
+        return $this->render('SfWebAppMainBundle:videos:new.html.twig', array(
             'video' => $video,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class VideosController extends Controller
     {
         $deleteForm = $this->createDeleteForm($video);
 
-        return $this->render('videos/show.html.twig', array(
+        return $this->render('SfWebAppMainBundle:videos:show.html.twig', array(
             'video' => $video,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class VideosController extends Controller
             return $this->redirectToRoute('videos_edit', array('id' => $video->getId()));
         }
 
-        return $this->render('videos/edit.html.twig', array(
+        return $this->render('SfWebAppMainBundle:videos:edit.html.twig', array(
             'video' => $video,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
