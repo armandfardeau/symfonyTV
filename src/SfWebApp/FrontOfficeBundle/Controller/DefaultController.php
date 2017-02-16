@@ -14,7 +14,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $videos = $em->getRepository('SfWebAppMainBundle:Channels')->findAll();
+        $videos = $em->getRepository('SfWebAppMainBundle:Videos')->findAll();
 
         return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig', array(
             'videos' => $videos,
