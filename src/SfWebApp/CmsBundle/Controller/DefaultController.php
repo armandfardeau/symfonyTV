@@ -8,6 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('SfWebAppCmsBundle:Default:index.html.twig');
+        $videos = $this->getDoctrine()->getRepository('SfWebAppMainBundle:Videos')->findAll();
+
+        return $this->render('SfWebAppCmsBundle:Default:index.html.twig',  ['videos' => $videos]);
     }
 }
