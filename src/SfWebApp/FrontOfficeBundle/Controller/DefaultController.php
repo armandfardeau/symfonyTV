@@ -14,10 +14,10 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $channels = $em->getRepository('SfWebAppMainBundle:Channels')->findAll();
+        $videos = $em->getRepository('SfWebAppMainBundle:Channels')->findAll();
 
         return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig', array(
-            'channels' => $channels,
+            'videos' => $videos,
         ));
     }
 }

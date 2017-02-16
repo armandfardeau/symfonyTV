@@ -1,6 +1,21 @@
-<h1>test</h1>
-<ul>
-    {% for channel in channels %}
-        <li>{{ channel.title }}</li>
-    {% endfor %}
-</ul>
+<<<<<<< HEAD
+<div class="videoLive__container">
+  <h2>Live</h2>
+  {% for video in videos %}
+    <article class="videoLive">
+      <div class="videoLive__thumbnail">
+        <p class="videoLive__channel">{% video.channel %}</p>
+        <img class="videoLive__img" src="{% video.thumbnail %}" alt="">
+      </div>
+      <div class="videoLive__duration">
+        <div class="videoLive__progress"></div>
+      </div>
+      <div class="videoLive__infos">
+        <p class="videoLive__infosSchedule">{% video.start %} - {% video.end %}</p>
+        <h4 class="videoLive__infosTitle">{% video.title %}</h4>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+=======
+>>>>>>> 50117f9c38a2ecf0b138ca9b5e0f0825ada6d3c4
