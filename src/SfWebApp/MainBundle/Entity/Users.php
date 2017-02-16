@@ -22,13 +22,6 @@ class Users
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="uuid", type="integer", unique=true)
-     */
-    private $uuid;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="last_name", type="string", length=255)

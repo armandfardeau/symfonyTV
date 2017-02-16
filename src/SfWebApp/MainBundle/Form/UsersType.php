@@ -13,7 +13,8 @@ class UsersType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('uuid')->add('lastName')->add('firstName')->add('userType')        ;
+        $builder
+            ->add('lastName')->add('firstName')->add('userType')        ;
     }
     
     /**

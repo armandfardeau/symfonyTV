@@ -14,7 +14,6 @@ class ChannelsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('uuid')
             ->add('title')
             ->add('cssClass');
     }

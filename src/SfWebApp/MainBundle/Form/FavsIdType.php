@@ -13,7 +13,7 @@ class FavsIdType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('uuid')->add('userId')->add('videoId')        ;
+        $builder->add('userId')->add('videoId')        ;
     }
     
     /**

@@ -13,7 +13,8 @@ class VideosType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('uuid')->add('title')->add('channel')->add('date')->add('timeStart')->add('timeEnd')->add('category')->add('excerpt')->add('thumbnail')->add('url')        ;
+        $builder
+            ->add('title')->add('channel')->add('date')->add('timeStart')->add('timeEnd')->add('category')->add('excerpt')->add('thumbnail')->add('url')        ;
     }
     
     /**

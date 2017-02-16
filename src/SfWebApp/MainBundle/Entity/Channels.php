@@ -22,13 +22,6 @@ class Channels
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="uuid", type="integer", unique=true)
-     */
-    private $uuid;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
@@ -42,11 +35,10 @@ class Channels
      */
     private $cssClass;
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -69,7 +61,7 @@ class Channels
     /**
      * Get uuid
      *
-     * @return integer 
+     * @return integer
      */
     public function getUuid()
     {
@@ -92,7 +84,7 @@ class Channels
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -115,7 +107,7 @@ class Channels
     /**
      * Get cssClass
      *
-     * @return string 
+     * @return string
      */
     public function getCssClass()
     {

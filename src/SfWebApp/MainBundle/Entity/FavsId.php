@@ -24,13 +24,6 @@ class FavsId
     /**
      * @var int
      *
-     * @ORM\Column(name="uuid", type="integer", unique=true)
-     */
-    private $uuid;
-
-    /**
-     * @var int
-     *
      * @ORM\Column(name="user_id", type="integer")
      */
     private $userId;

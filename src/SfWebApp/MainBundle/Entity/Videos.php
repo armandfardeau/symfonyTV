@@ -22,13 +22,6 @@ class Videos
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="uuid", type="integer", unique=true)
-     */
-    private $uuid;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
