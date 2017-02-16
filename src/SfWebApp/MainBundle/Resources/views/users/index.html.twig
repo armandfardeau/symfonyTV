@@ -1,18 +1,19 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ include('@SfWebAppMain/menu.html.twig') }}
     <h1>Users list</h1>
 
     <table>
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Uuid</th>
-                <th>Lastname</th>
-                <th>Firstname</th>
-                <th>Usertype</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <th>Uuid</th>
+            <th>Lastname</th>
+            <th>Firstname</th>
+            <th>Usertype</th>
+            <th>Actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for user in users %}
