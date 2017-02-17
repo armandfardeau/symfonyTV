@@ -71,11 +71,12 @@ select, select, select {
   font-size: 0.875em; }
 
 body {
-  font-family: "montserratMedium";
+  font-family: "Avenir";
   font-size: 16px;
   line-height: 1.4; }
 
 p {
+  font-size: 1rem;
   margin-bottom: 1.5em; }
 
 @font-face {
@@ -90,7 +91,5 @@ p {
   src: url("fonts/montserrat-mediummontserrat-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-body {
-  background-color: red; }
 
 /*# sourceMappingURL=app.css.map */
