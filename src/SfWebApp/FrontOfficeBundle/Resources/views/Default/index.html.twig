@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-    {{ include '@SfWebAppFrontOffice/menu.html.twig'}}
+    {{ include('SfWebAppFrontOfficeBundle::menu.html.twig') }}
     <div class="videoLive__container">
         <h3>Live</h3>
         {% for video in videos %}
@@ -13,7 +13,8 @@
                     <div class="videoLive__progress"></div>
                 </div>
                 <div class="videoLive__infos">
-                    <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
+                    <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }}
+                        - {{ video.getTimeEnd | date('h:i') }}</p>
                     <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
                 </div>
             </article>
