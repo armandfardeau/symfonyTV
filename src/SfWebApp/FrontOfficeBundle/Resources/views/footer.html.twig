@@ -1,0 +1,67 @@
+  {% block footer %}
+    <footer>
+
+        <div class="sectionLiensFooter">
+          {% for video in videos %}
+            <div class="sectionLiensFooter__live">
+              <p class=sectionLiensFooter__sectionName>Live</p>
+              <ul>
+                <li>#{{ video.getTitle + 1 }}</li>
+              </ul>
+            </div>
+          {% endfor %}
+
+          <div class="sectionLiensFooter__account">
+            <p class=sectionLiensFooter__sectionName>Account</p>
+            <ul>
+              <li>Personal schedule</li>
+              <li>Preferences</li>
+              <li>Help</li>
+            </ul>
+          </div>
+
+
+          {% for video in videos %}
+            <div class="sectionLiensFooter__news">
+              <p class=sectionLiensFooter__sectionName>News</p>
+              <ul>
+                <li>#{{ video.getChannel + 1 }}</li>
+              </ul>
+            </div>
+          {% endfor %}
+
+          <div class="sectionLiensFooter__informations">
+            <p class=sectionLiensFooter__sectionName>Informations</p>
+            <ul>
+              <li>CGU</li>
+              <li>Mentions légales</li>
+              <li>Cookies</li>
+              <li>Confidentialité</li>
+            </ul>
+          </div>
+
+          {% for video in videos %}
+            <div class="sectionLiensFooter__schedule">
+              <p class=sectionLiensFooter__sectionName>Schedule</p>
+                <ul>
+                  <li>Octopus #{{ video.getChannel + 1 }}</li>
+                </ul>
+            </div>
+          {% endfor %}
+        </div>
+
+
+      <div class="generalConditions">
+        <div class="generalConditions__seriesName">
+          <p>Octopus</p>
+        </div>
+        <div class="generalConditions__projectName">
+          <p>Projet SymfonyTV</p>
+        </div>
+        <div class="generalConditions__legacy">
+          <p>© 2017 Octopus Company</p>
+        </div>
+      </div>
+    </footer>
+  {% endblock %}
+</html>
