@@ -1,11 +1,5 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport">
-
-  </head>
-  <body>
+{% extends '::base.html.twig' %}
+{% block body %}
   <div class="videoLive__container">
     <h3>Live</h3>
     {% for video in videos %}
@@ -24,4 +18,4 @@
       </article>
     {% endfor %}
   </div>
-</html>
+{% endblock %}
