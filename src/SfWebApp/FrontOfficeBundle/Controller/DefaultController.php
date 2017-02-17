@@ -26,16 +26,15 @@ class DefaultController extends Controller
     /**
      * Finds and displays a video entity.
      *
-     * @Route("/{id}", name="single_post")
+     * @Route("/news/{title}", name="single_post")
      * @Method("GET")
      */
     public function showAction(Videos $video)
     {
 
-
         return $this->render('SfWebAppFrontOfficeBundle:Default:single_post.html.twig',
             array(
-                'videos' => $video,
+                'video' => $video,
             ));
     }
 }
