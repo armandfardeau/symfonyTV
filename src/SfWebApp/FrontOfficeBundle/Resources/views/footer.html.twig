@@ -2,14 +2,34 @@
     <footer>
 
         <div class="sectionLiensFooter">
-          {% for video in videos %}
-            <div class="sectionLiensFooter__live">
-              <p class=sectionLiensFooter__sectionName>Live</p>
-              <ul>
-                <li>#{{ video.getTitle + 1 }}</li>
-              </ul>
+          
+          <div class="sectionLiensFooter__live">
+            <p class=sectionLiensFooter__sectionName>Live</p>
+              {% for video in videos %}
+                <ul>
+                  <li>#{{ video.getTitle + 1 }}</li>
+                </ul>
+              {% endfor %}
             </div>
-          {% endfor %}
+
+
+            <div class="sectionLiensFooter__news">
+              <p class=sectionLiensFooter__sectionName>News</p>
+              {% for video in videos %}
+                <ul>
+                  <li>#{{ video.getChannel + 1 }}</li>
+                </ul>
+              {% endfor %}
+            </div>
+
+            <div class="sectionLiensFooter__schedule">
+              <p class=sectionLiensFooter__sectionName>Schedule</p>
+                {% for video in videos %}
+                  <ul>
+                    <li>Octopus #{{ video.getChannel + 1 }}</li>
+                  </ul>
+                {% endfor %}
+            </div>
 
           <div class="sectionLiensFooter__account">
             <p class=sectionLiensFooter__sectionName>Account</p>
@@ -19,16 +39,6 @@
               <li>Help</li>
             </ul>
           </div>
-
-
-          {% for video in videos %}
-            <div class="sectionLiensFooter__news">
-              <p class=sectionLiensFooter__sectionName>News</p>
-              <ul>
-                <li>#{{ video.getChannel + 1 }}</li>
-              </ul>
-            </div>
-          {% endfor %}
 
           <div class="sectionLiensFooter__informations">
             <p class=sectionLiensFooter__sectionName>Informations</p>
@@ -40,14 +50,6 @@
             </ul>
           </div>
 
-          {% for video in videos %}
-            <div class="sectionLiensFooter__schedule">
-              <p class=sectionLiensFooter__sectionName>Schedule</p>
-                <ul>
-                  <li>Octopus #{{ video.getChannel + 1 }}</li>
-                </ul>
-            </div>
-          {% endfor %}
         </div>
 
 
