@@ -114,7 +114,7 @@ section {
 .videoLive, .videoNews {
   background-color: #494949;
   margin: 10px; }
-  .videoLive__thumbnail, .videoNews__thumbnail {
+  .videoLive__thumbnail, .videoLive .videoLive__thumbnail, .videoNews__thumbnail, .videoNews .videoLive__thumbnail {
     background-color: #EBEBEB;
     padding: 1.25em; }
   .videoLive__duration, .videoNews__duration {
