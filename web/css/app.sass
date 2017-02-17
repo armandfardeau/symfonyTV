@@ -3,3 +3,17 @@
 @import 'core/typo'
 @import 'core/mixins'
 @import 'core/fonts'
+
+.container
+    max-width: 80em
+    margin: 0 auto
+    padding: 20px
+
+.videoLive__container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+
+.videoLive
+    +videoLive()

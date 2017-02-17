@@ -71,7 +71,7 @@ select, select, select {
   font-size: 0.875em; }
 
 body {
-  font-family: "Avenir";
+  font-family: "montserratMedium";
   font-size: 16px;
   line-height: 1.4; }
 
@@ -79,17 +79,60 @@ p {
   font-size: 1rem;
   margin-bottom: 1.5em; }
 
+h3 {
+  color: #494949;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 0.55em; }
+
 @font-face {
   font-family: "montserratMedium";
-  src: url("fonts/montserrat-mediummontserrat-medium-webfont.woff2") format("woff2");
-  src: url("fonts/montserrat-mediummontserrat-medium-webfont.woff") format("woff");
+  src: url("../fonts/montserrat-mediummontserrat-medium-webfont.woff2") format("woff2");
+  src: url("../fonts/montserrat-mediummontserrat-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: "montserratLight";
-  src: url("fonts/montserrat-mediummontserrat-light-webfont.woff2") format("woff2");
-  src: url("fonts/montserrat-mediummontserrat-light-webfont.woff") format("woff");
+  src: url("../fonts/montserrat-mediummontserrat-light-webfont.woff2") format("woff2");
+  src: url("../fonts/montserrat-mediummontserrat-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+.container {
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 20px; }
+
+.videoLive__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.videoLive {
+  background-color: #494949;
+  margin: 10px; }
+  .videoLive__thumbnail {
+    background-color: #EBEBEB;
+    padding: 1.25em; }
+  .videoLive__duration {
+    height: 8px;
+    width: 100%;
+    position: relative;
+    background-color: #D8D8D8; }
+  .videoLive__progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background-color: #FDBE02; }
+  .videoLive__infos {
+    padding: 10px 20px 22px 20px; }
+  .videoLive__infosSchedule {
+    color: #D8D8D8;
+    font-size: 0.875rem;
+    margin-bottom: 0.375em; }
+  .videoLive__infosTitle {
+    color: #fff; }
 
 /*# sourceMappingURL=app.css.map */
