@@ -106,7 +106,7 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-between; }
 
 .videoLive {
   background-color: #494949;
@@ -134,5 +134,9 @@ h3 {
     margin-bottom: 0.375em; }
   .videoLive__infosTitle {
     color: #fff; }
+
+body {
+  background-image: url("../img/mosaic.png");
+  background-size: 48px 36px; }
 
 /*# sourceMappingURL=app.css.map */

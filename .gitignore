@@ -13,3 +13,4 @@
 .idea
 .DS_Store
 .map
+/web/css/.sass-cache
