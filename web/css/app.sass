@@ -9,14 +9,49 @@
     margin: 0 auto
     padding: 20px
 
+section
+    margin-bottom: 3.125rem
+
 .videoLive__container
     display: flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
 
-.videoLive
-    +videoLive()
+.videoLive, .videoNews
+    +videoComponent()
+
+// En attente du slider
+.videoNews:nth-child(1), .videoNews:nth-child(2)
+    display: none
+
+.videoNews
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+
+    border: 8px solid $octopus-3
+
+    &__thumbnail
+        width: 60%
+
+    &__infos
+        padding: 60px 50px 80px 60px
+
+    &__infosTitle
+        font-size: 1.5rem
+        margin-bottom: 0.8em
+
+    &__infosExcerpt
+        color: #fff
+        font-family: 'montserratLight'
+        margin-bottom: 1.25em
+
+    &__link
+        color: #fff
+        font-size: 0.875rem
+        text-decoration: underline
 
 body
     background-image: url('../img/mosaic.png')
