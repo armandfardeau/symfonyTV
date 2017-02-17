@@ -1,6 +1,6 @@
 {% extends '::base.html.twig' %}
 {% block body %}
-    {{ include('@SfWebAppMain/menu.html.twig') }}
+    {{ include '@SfWebAppFrontOffice/menu.html.twig'}}
     <div class="videoLive__container">
         <h3>Live</h3>
         {% for video in videos %}
