@@ -70,10 +70,13 @@ select, select, select {
   padding: 0 25px 0 8px;
   font-size: 0.875em; }
 
+:root {
+  font-size: 16px; }
+
 body {
   font-family: "montserratMedium";
   font-size: 16px;
-  line-height: 1.4; }
+  line-height: 1.618em; }
 
 p {
   font-size: 1rem;
@@ -81,9 +84,24 @@ p {
 
 h3 {
   color: #494949;
-  font-size: 36px;
+  font-size: 2.25em;
   text-transform: uppercase;
   margin-bottom: 0.55em; }
+
+.sectionLiensFooter p {
+  font-size: 1.2rem; }
+
+footer li {
+  font-family: "montserratLight";
+  color: #D4D4D4; }
+
+.generalConditions p {
+  font-family: "montserratLight";
+  font-size: 0.7rem;
+  color: #D4D4D4;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: auto; }
 
 @font-face {
   font-family: "montserratMedium";
@@ -93,14 +111,17 @@ h3 {
   font-style: normal; }
 @font-face {
   font-family: "montserratLight";
-  src: url("../fonts/montserrat-mediummontserrat-light-webfont.woff2") format("woff2");
-  src: url("../fonts/montserrat-mediummontserrat-light-webfont.woff") format("woff");
+  src: url("../fonts/montserrat-lightmontserrat-light-webfont.woff2") format("woff2");
+  src: url("../fonts/montserrat-lightmontserrat-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 .container {
-  max-width: 80em;
+  max-width: 65em;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 20px 0; }
+
+section {
+  margin-bottom: 3.125rem; }
 
 .videoLive__container {
   display: flex;
@@ -108,35 +129,100 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between; }
 
-.videoLive {
+.videoLive, .videoNews {
   background-color: #494949;
   margin: 10px; }
-  .videoLive__thumbnail {
+  .videoLive__thumbnail, .videoLive .videoLive__thumbnail, .videoNews__thumbnail, .videoNews .videoLive__thumbnail {
     background-color: #EBEBEB;
     padding: 1.25em; }
-  .videoLive__duration {
+  .videoLive__duration, .videoNews__duration {
     height: 8px;
     width: 100%;
     position: relative;
     background-color: #D8D8D8; }
-  .videoLive__progress {
+  .videoLive__progress, .videoNews__progress {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 30%;
     background-color: #FDBE02; }
-  .videoLive__infos {
+  .videoLive__infos, .videoNews__infos {
     padding: 10px 20px 22px 20px; }
-  .videoLive__infosSchedule {
+  .videoLive__infosSchedule, .videoNews__infosSchedule {
     color: #D8D8D8;
     font-size: 0.875rem;
     margin-bottom: 0.375em; }
-  .videoLive__infosTitle {
+  .videoLive__infosTitle, .videoNews__infosTitle {
     color: #fff; }
+
+.videoNews:nth-child(1), .videoNews:nth-child(2) {
+  display: none; }
+
+.videoNews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: 8px solid #0072BB; }
+  .videoNews__thumbnail {
+    width: 60%; }
+  .videoNews__infos {
+    padding: 60px 50px 80px 60px; }
+  .videoNews__infosTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.8em; }
+  .videoNews__infosExcerpt {
+    color: #fff;
+    font-family: "montserratLight";
+    margin-bottom: 1.25em; }
+  .videoNews__link {
+    color: #fff;
+    font-size: 0.875rem;
+    text-decoration: underline; }
 
 body {
   background-image: url("../img/mosaic.png");
   background-size: 48px 36px; }
+
+footer {
+  background-color: #404040;
+  color: #fff;
+  padding: 50px 0; }
+  footer li {
+    position: relative;
+    display: inline-block;
+    padding-left: 2.25em;
+    list-style: disc;
+    list-style-position: inside; }
+    footer li::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      transform: translate(-50%, -50%); }
+  footer .sectionLiensFooter__sectionName {
+    font-size: 1.5rem;
+    margin-bottom: 0.67em; }
+
+.sectionLiensFooterLine1 {
+  margin-bottom: 50px; }
+
+.sectionLiensFooterLine1, .sectionLiensFooterLine2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.generalConditions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #202020; }
 
 /*# sourceMappingURL=app.css.map */

@@ -5,9 +5,12 @@
 @import 'core/fonts'
 
 .container
-    max-width: 80em
+    max-width: 65em
     margin: 0 auto
-    padding: 20px
+    padding: 20px 0
+
+section
+    margin-bottom: 3.125rem
 
 .videoLive__container
     display: flex
@@ -15,9 +18,86 @@
     flex-wrap: wrap
     justify-content: space-between
 
-.videoLive
-    +videoLive()
+.videoLive, .videoNews
+    +videoComponent()
+
+// En attente du slider
+.videoNews:nth-child(1), .videoNews:nth-child(2)
+    display: none
+
+.videoNews
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+
+    border: 8px solid $octopus-3
+
+    &__thumbnail
+        width: 60%
+
+    &__infos
+        padding: 60px 50px 80px 60px
+
+    &__infosTitle
+        font-size: 1.5rem
+        margin-bottom: 0.8em
+
+    &__infosExcerpt
+        color: #fff
+        font-family: 'montserratLight'
+        margin-bottom: 1.25em
+
+    &__link
+        color: #fff
+        font-size: 0.875rem
+        text-decoration: underline
 
 body
     background-image: url('../img/mosaic.png')
     background-size: 48px 36px
+
+
+footer
+    background-color: #404040
+    color: #fff
+    padding: 50px 0
+
+    li
+        position: relative
+        display: inline-block
+        padding-left: 2.25em
+        list-style: disc
+        list-style-position: inside
+
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 10px
+            width: 2px
+            height: 2px
+            background-color: #fff
+
+            transform: translate(-50%, -50%)
+
+    .sectionLiensFooter__sectionName
+        font-size: 1.5rem
+        margin-bottom: 0.67em
+
+.sectionLiensFooterLine1
+    margin-bottom: 50px
+
+.sectionLiensFooterLine1, .sectionLiensFooterLine2
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+.generalConditions
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-around
+    align-content: center
+    background-color: #202020
