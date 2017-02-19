@@ -70,10 +70,13 @@ select, select, select {
   padding: 0 25px 0 8px;
   font-size: 0.875em; }
 
+:root {
+  font-size: 16px; }
+
 body {
   font-family: "montserratMedium";
   font-size: 16px;
-  line-height: 1.618; }
+  line-height: 1.618em; }
 
 p {
   font-size: 1rem;
@@ -81,23 +84,20 @@ p {
 
 h3 {
   color: #494949;
-  font-size: 36px;
+  font-size: 2.25em;
   text-transform: uppercase;
   margin-bottom: 0.55em; }
 
 .sectionLiensFooter p {
-  font-family: "montserratMedium";
-  font-size: 1.2em; }
+  font-size: 1.2rem; }
 
-.sectionLiensFooter ul {
+footer li {
   font-family: "montserratLight";
-  color: #D4D4D4;
-  font-size: 0.75em; }
+  color: #D4D4D4; }
 
 .generalConditions p {
   font-family: "montserratLight";
   font-size: 0.7rem;
-  line-height: 1.618;
   color: #D4D4D4;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -116,9 +116,9 @@ h3 {
   font-weight: normal;
   font-style: normal; }
 .container {
-  max-width: 80em;
+  max-width: 65em;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 20px 0; }
 
 section {
   margin-bottom: 3.125rem; }
@@ -190,8 +190,23 @@ footer {
   color: #fff;
   padding: 50px 0; }
   footer li {
+    position: relative;
+    display: inline-block;
+    padding-left: 2.25em;
     list-style: disc;
     list-style-position: inside; }
+    footer li::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      width: 2px;
+      height: 2px;
+      background-color: #fff;
+      transform: translate(-50%, -50%); }
+  footer .sectionLiensFooter__sectionName {
+    font-size: 1.5rem;
+    margin-bottom: 0.67em; }
 
 .sectionLiensFooterLine1 {
   margin-bottom: 50px; }
@@ -200,8 +215,7 @@ footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center; }
+  justify-content: space-between; }
 
 .generalConditions {
   display: flex;

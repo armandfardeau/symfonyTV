@@ -1,35 +1,34 @@
   {% block footer %}
     <footer>
-
-        <div class="sectionLiensFooter container">
-          <div class="sectionLiensFooterLine1">
-            <div class="sectionLiensFooter__live ">
-              <p class=sectionLiensFooter__sectionName>Live</p>
-                {% for video in videos %}
-                  <ul>
+        <div class="container">
+            <div class="sectionLiensFooterLine1">
+                <div class="sectionLiensFooter__live ">
+                    <p class=sectionLiensFooter__sectionName>Live</p>
+                    {% for video in videos %}
+                    <ul>
                     <li>{{ video.getTitle }}</li>
-                  </ul>
-                {% endfor %}
-              </div>
+                    </ul>
+                    {% endfor %}
+                </div>
 
 
-              <div class="sectionLiensFooter__news">
+                <div class="sectionLiensFooter__news">
                 <p class=sectionLiensFooter__sectionName>News</p>
                 {% for video in videos %}
-                  <ul>
-                    <li>{{ video.getTitle }}</li>
-                  </ul>
+                <ul>
+                <li>{{ video.getTitle }}</li>
+                </ul>
                 {% endfor %}
-              </div>
+                </div>
 
-              <div class="sectionLiensFooter__schedule">
+                <div class="sectionLiensFooter__schedule">
                 <p class=sectionLiensFooter__sectionName>Schedule</p>
-                  {% for video in videos %}
-                    <ul>
-                      <li>Octopus #{{ video.getChannel + 1 }}</li>
-                    </ul>
-                  {% endfor %}
-              </div>
+                {% for video in videos %}
+                <ul>
+                <li>Octopus #{{ video.getChannel + 1 }}</li>
+                </ul>
+                {% endfor %}
+                </div>
             </div>
 
           <div class="sectionLiensFooterLine2">
@@ -53,19 +52,19 @@
             </div>
           </div>
         </div>
-
-
-      <div class="generalConditions">
-        <div class="generalConditions__seriesName">
-          <p>Octopus</p>
-        </div>
-        <div class="generalConditions__projectName">
-          <p>Projet SymfonyTV</p>
-        </div>
-        <div class="generalConditions__legacy">
-          <p>© 2017 Octopus Company</p>
-        </div>
-      </div>
     </footer>
+    <div class="generalConditions">
+        <div class="container">
+            <div class="generalConditions__seriesName">
+                <p>Octopus</p>
+            </div>
+            <div class="generalConditions__projectName">
+                <p>Projet SymfonyTV</p>
+            </div>
+            <div class="generalConditions__legacy">
+                <p>© 2017 Octopus Company</p>
+            </div>
+        </div>
+    </div>
   {% endblock %}
 </html>

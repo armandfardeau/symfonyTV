@@ -1,8 +1,8 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-    {{ include('SfWebAppFrontOfficeBundle::header.html.twig') }}
     <div class="container">
+        {{ include('SfWebAppFrontOfficeBundle::header.html.twig') }}
         <section class="videoLive__section">
             <h3>Live</h3>
             <div class="videoLive__container">
@@ -54,6 +54,5 @@
             </div>
         </section>
     </div>
-
     {{ include('SfWebAppFrontOfficeBundle::footer.html.twig') }}
 {% endblock %}
