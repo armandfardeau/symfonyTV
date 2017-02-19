@@ -33,4 +33,6 @@ class FavsIdType extends AbstractType
     {
         return 'sfwebapp_mainbundle_favsid';
     }
+
+
 }

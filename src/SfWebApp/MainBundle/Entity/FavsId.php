@@ -39,7 +39,7 @@ class FavsId
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -62,7 +62,7 @@ class FavsId
     /**
      * Get uuid
      *
-     * @return integer
+     * @return integer 
      */
     public function getUuid()
     {
@@ -85,7 +85,7 @@ class FavsId
     /**
      * Get userId
      *
-     * @return integer
+     * @return integer 
      */
     public function getUserId()
     {
@@ -108,7 +108,7 @@ class FavsId
     /**
      * Get videoId
      *
-     * @return integer
+     * @return integer 
      */
     public function getVideoId()
     {

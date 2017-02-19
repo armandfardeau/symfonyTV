@@ -35,4 +35,6 @@ class ChannelsType extends AbstractType
     {
         return 'sfwebapp_mainbundle_channels';
     }
+
+
 }

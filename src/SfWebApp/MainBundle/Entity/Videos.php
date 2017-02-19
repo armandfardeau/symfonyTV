@@ -88,7 +88,7 @@ class Videos
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -111,7 +111,7 @@ class Videos
     /**
      * Get uuid
      *
-     * @return integer
+     * @return integer 
      */
     public function getUuid()
     {
@@ -134,7 +134,7 @@ class Videos
     /**
      * Get title
      *
-     * @return string
+     * @return string 
      */
     public function getTitle()
     {
@@ -157,7 +157,7 @@ class Videos
     /**
      * Get channel
      *
-     * @return integer
+     * @return integer 
      */
     public function getChannel()
     {
@@ -180,7 +180,7 @@ class Videos
     /**
      * Get date
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getDate()
     {
@@ -203,7 +203,7 @@ class Videos
     /**
      * Get timeStart
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getTimeStart()
     {
@@ -226,7 +226,7 @@ class Videos
     /**
      * Get timeEnd
      *
-     * @return \DateTime
+     * @return \DateTime 
      */
     public function getTimeEnd()
     {
@@ -249,7 +249,7 @@ class Videos
     /**
      * Get category
      *
-     * @return integer
+     * @return integer 
      */
     public function getCategory()
     {
@@ -272,7 +272,7 @@ class Videos
     /**
      * Get excerpt
      *
-     * @return string
+     * @return string 
      */
     public function getExcerpt()
     {
@@ -295,7 +295,7 @@ class Videos
     /**
      * Get thumbnail
      *
-     * @return string
+     * @return string 
      */
     public function getThumbnail()
     {
@@ -318,7 +318,7 @@ class Videos
     /**
      * Get url
      *
-     * @return string
+     * @return string 
      */
     public function getUrl()
     {

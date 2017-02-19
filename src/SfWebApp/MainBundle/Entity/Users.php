@@ -46,7 +46,7 @@ class Users
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -69,7 +69,7 @@ class Users
     /**
      * Get uuid
      *
-     * @return integer
+     * @return integer 
      */
     public function getUuid()
     {
@@ -92,7 +92,7 @@ class Users
     /**
      * Get lastName
      *
-     * @return string
+     * @return string 
      */
     public function getLastName()
     {
@@ -115,7 +115,7 @@ class Users
     /**
      * Get firstName
      *
-     * @return string
+     * @return string 
      */
     public function getFirstName()
     {
@@ -138,7 +138,7 @@ class Users
     /**
      * Get userType
      *
-     * @return integer
+     * @return integer 
      */
     public function getUserType()
     {
