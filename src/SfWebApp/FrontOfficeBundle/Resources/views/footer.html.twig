@@ -1,56 +1,56 @@
-  {% block footer %}
+{% block footer %}
     <footer>
         <div class="container">
             <div class="sectionLiensFooterLine1">
                 <div class="sectionLiensFooter__live ">
                     <p class=sectionLiensFooter__sectionName>Live</p>
                     {% for video in videos %}
-                    <ul>
-                    <li>{{ video.getTitle }}</li>
-                    </ul>
+                        <ul>
+                            <li>{{ video.getTitle }}</li>
+                        </ul>
                     {% endfor %}
                 </div>
 
 
                 <div class="sectionLiensFooter__news">
-                <p class=sectionLiensFooter__sectionName>News</p>
-                {% for video in videos %}
-                <ul>
-                <li>{{ video.getTitle }}</li>
-                </ul>
-                {% endfor %}
+                    <p class=sectionLiensFooter__sectionName>News</p>
+                    {% for video in videos %}
+                        <ul>
+                            <li>{{ video.getTitle }}</li>
+                        </ul>
+                    {% endfor %}
                 </div>
 
                 <div class="sectionLiensFooter__schedule">
-                <p class=sectionLiensFooter__sectionName>Schedule</p>
-                {% for video in videos %}
-                <ul>
-                <li>Octopus #{{ video.getChannel + 1 }}</li>
-                </ul>
-                {% endfor %}
+                    <p class=sectionLiensFooter__sectionName>Schedule</p>
+                    {% for video in videos %}
+                        <ul>
+                            <li>Octopus #{{ video.getChannel + 1 }}</li>
+                        </ul>
+                    {% endfor %}
                 </div>
             </div>
 
-          <div class="sectionLiensFooterLine2">
-            <div class="sectionLiensFooter__account">
-              <p class=sectionLiensFooter__sectionName>Account</p>
-              <ul>
-                <li>Personal schedule</li>
-                <li>Preferences</li>
-                <li>Help</li>
-              </ul>
-            </div>
+            <div class="sectionLiensFooterLine2">
+                <div class="sectionLiensFooter__account">
+                    <p class=sectionLiensFooter__sectionName>Account</p>
+                        <ul>
+                            <li>Personal schedule</li>
+                            <li>Preferences</li>
+                            <li>Help</li>
+                        </ul>
+                </div>
 
-            <div class="sectionLiensFooter__informations">
-              <p class=sectionLiensFooter__sectionName>Informations</p>
-              <ul>
-                <li>CGU</li>
-                <li>Mentions légales</li>
-                <li>Cookies</li>
-                <li>Confidentialité</li>
-              </ul>
+                <div class="sectionLiensFooter__informations">
+                    <p class=sectionLiensFooter__sectionName>Informations</p>
+                        <ul>
+                            <li>CGU</li>
+                            <li>Mentions légales</li>
+                            <li>Cookies</li>
+                            <li>Confidentialité</li>
+                        </ul>
+                </div>
             </div>
-          </div>
         </div>
     </footer>
     <div class="generalConditions">
@@ -66,5 +66,5 @@
             </div>
         </div>
     </div>
-  {% endblock %}
+{% endblock %}
 </html>
