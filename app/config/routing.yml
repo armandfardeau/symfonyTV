@@ -1,3 +1,7 @@
+sf_web_app_main_products:
+    resource: "@SfWebAppMainBundle/Controller/ProductsController.php"
+    type:     annotation
+
 sf_web_app_front_office:
     resource: "@SfWebAppFrontOfficeBundle/Controller/"
     type:     annotation

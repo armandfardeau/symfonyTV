@@ -59,7 +59,7 @@ class Videos
     /**
      * @var string
      *
-     * @ORM\Column(name="category", type="integer", nullable=true)
+     * @ORM\Column(name="category", type="string", nullable=true)
      */
     private $category;
 
