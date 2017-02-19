@@ -31,7 +31,6 @@ class DefaultController extends Controller
      */
     public function showAction(Videos $video)
     {
-
         return $this->render('SfWebAppFrontOfficeBundle:Default:single_post.html.twig',
             array(
                 'video' => $video,
