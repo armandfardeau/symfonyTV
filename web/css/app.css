@@ -85,6 +85,24 @@ h3 {
   text-transform: uppercase;
   margin-bottom: 0.55em; }
 
+.sectionLiensFooter p {
+  font-family: "montserratMedium";
+  font-size: 1.2em; }
+
+.sectionLiensFooter ul {
+  font-family: "montserratLight";
+  color: #D4D4D4;
+  font-size: 0.75em; }
+
+.generalConditions p {
+  font-family: "montserratLight";
+  font-size: 0.7rem;
+  line-height: 1.618;
+  color: #D4D4D4;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: auto; }
+
 @font-face {
   font-family: "montserratMedium";
   src: url("../fonts/montserrat-mediummontserrat-medium-webfont.woff2") format("woff2");
@@ -166,5 +184,31 @@ section {
 body {
   background-image: url("../img/mosaic.png");
   background-size: 48px 36px; }
+
+footer {
+  background-color: #404040;
+  color: #fff;
+  padding: 50px 0; }
+  footer li {
+    list-style: disc;
+    list-style-position: inside; }
+
+.sectionLiensFooterLine1 {
+  margin-bottom: 50px; }
+
+.sectionLiensFooterLine1, .sectionLiensFooterLine2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center; }
+
+.generalConditions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #202020; }
 
 /*# sourceMappingURL=app.css.map */
