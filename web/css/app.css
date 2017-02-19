@@ -95,14 +95,6 @@ footer li {
   font-family: "montserratLight";
   color: #D4D4D4; }
 
-.generalConditions p {
-  font-family: "montserratLight";
-  font-size: 0.7rem;
-  color: #D4D4D4;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  margin: auto; }
-
 @font-face {
   font-family: "montserratMedium";
   src: url("../fonts/montserrat-mediummontserrat-medium-webfont.woff2") format("woff2");
@@ -191,38 +183,51 @@ footer {
   padding: 50px 0; }
   footer li {
     position: relative;
-    display: inline-block;
-    padding-left: 2.25em;
     list-style: disc;
     list-style-position: inside; }
-    footer li::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      width: 2px;
-      height: 2px;
-      background-color: #fff;
-      transform: translate(-50%, -50%); }
+  footer .sectionLiensFooter__live {
+    flex-grow: 1; }
+  footer .sectionLiensFooter__news {
+    flex-grow: 1; }
+  footer .sectionLiensFooter__schedule {
+    flex-grow: 0; }
   footer .sectionLiensFooter__sectionName {
     font-size: 1.5rem;
     margin-bottom: 0.67em; }
 
-.sectionLiensFooterLine1 {
-  margin-bottom: 50px; }
-
 .sectionLiensFooterLine1, .sectionLiensFooterLine2 {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.sectionLiensFooterLine1 {
+  margin-bottom: 50px;
   justify-content: space-between; }
 
+.sectionLiensFooterLine2 {
+  justify-content: center; }
+  .sectionLiensFooterLine2 .sectionLiensFooter__account {
+    flex-grow: 1; }
+  .sectionLiensFooterLine2 .sectionLiensFooter__informations {
+    flex-grow: 1;
+    transform: translateX(-54px); }
+
 .generalConditions {
+  color: #fff;
+  background-color: #202020; }
+  .generalConditions p {
+    font-family: "montserratLight";
+    margin-bottom: 0; }
+  .generalConditions__projectName {
+    text-align: center; }
+  .generalConditions__legacy {
+    text-align: right; }
+
+.generalConditions__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-  background-color: #202020; }
+  justify-content: space-between;
+  align-content: center; }
 
 /*# sourceMappingURL=app.css.map */
