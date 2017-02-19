@@ -1,30 +1,12 @@
-language: php
-
 php:
-  - 5.4
-  - 5.5
-  - 7.1
-  - hhvm
-
-services:
-    - redis
-    - mysql
+    - 7.1
 
 before_script:
-    - cp app/config/parameters.yml.dist app/config/parameters.yml
-    - composer self-update
-    - composer install --dev --no-interaction --prefer-source
-    - app/console doctrine:database:create --env=test --no-interaction --quiet
-    - app/console doctrine:migrations:migrate --env=test --no-interaction --quiet
-    - app/console cache:warmup --env=test --quiet
-
-script:
-    - ./bin/phpspec run -fpretty --verbose
-    - ./bin/behat  --no-snippets --no-paths --verbose
-
-matrix:
-    allow_failures:
-          - php: hhvm
+  - cp app/config/parameters.yml.travis app/config/parameters.yml
+  - composer install
+  - php app/console doctrine:database:create --env=test
+  - php app/console doctrine:schema:create --env=test
+  - php app/console doctrine:fixtures:load -n --env=test
 
 script:
   - phpunit -c app
