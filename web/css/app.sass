@@ -58,6 +58,56 @@ body
     background-size: 48px 36px
 
 
+.videoSchedule
+
+    &__section h3
+        margin-bottom: 1.2em
+
+    &__container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__channel
+        flex-grow: 1
+        margin: 0 10px 20px
+
+    &__channelTitle
+        text-align: center
+
+        h4
+            color: $darkgray
+            font-size: 1.75rem
+            margin-bottom: 0.5em
+
+    &__show
+        padding: 15px 20px
+        background-color: #404040
+        border-bottom: 2px solid #000
+
+        &Time
+            color: $mediumgray
+            font-size: 0.875rem
+            margin-bottom: 0.42em
+
+        &Title
+            color: #fff
+            font-size: 1.125rem
+            margin-bottom: 0
+
+.octopus-1
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-1
+
+.octopus-2
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-2
+
+.octopus-3
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-3
+
 footer
     background-color: #404040
     color: #fff
@@ -123,5 +173,5 @@ footer
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    justify-content: space-between
+    justify-content: center
     align-content: center
