@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% extends '::base.html.twig' %}
 
 {% block body %}
@@ -8,35 +7,6 @@
             <h3>Live</h3>
             <div class="videoLive__container">
 
-=======
-<<<<<<< HEAD
-<div class="videoLive__container">
-  <h3>Live</h3>
-  {% for video in videos %}
-    <article class="videoLive">
-      <div class="videoLive__thumbnail">
-        <p class="videoLive__channel">{{ video.getChannel }}</p>
-        <img class="videoLive__img" src="{{ video.getThumbnail }}">
-      </div>
-      <div class="videoLive__duration">
-        <div class="videoLive__progress"></div>
-      </div>
-      <div class="videoLive__infos">
-        <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
-        <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
-      </div>
-    </article>
-  {% endfor %}
-</div>
-=======
-{% extends '::base.html.twig' %}
-{% block body %}
-    {{ include('SfWebAppFrontOfficeBundle::menu.html.twig') }}
-    <div class="container">
-        <section class="videoLive__section">
-            <h3>Live</h3>
-            <div class="videoLive__container">
->>>>>>> 5370a328d4de7c27011f0f593427c51a96fb60a6
                 {% for video in videos %}
                     <article class="videoLive">
                         <div class="videoLive__thumbnail">
@@ -49,7 +19,6 @@
                         <div class="videoLive__infos">
                             <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
                             <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
-<<<<<<< HEAD
                         </div>
                     </article>
                 {% endfor %}
@@ -71,19 +40,12 @@
                             <h4 class="videoNews__infosTitle">{{ video.getTitle }}</h4>
                             <p class="videoNews__infosExcerpt">{{ video.excerpt }}</p>
                             <a class="videoNews__link" href="{{ path('single_post', { 'title': video.getTitle }) }}">Learn more ></a>
-=======
-
-
-                            <a href="{{ path('single_post', { 'title': video.getTitle }) }}">show</a>
-
->>>>>>> 5370a328d4de7c27011f0f593427c51a96fb60a6
                         </div>
                     </article>
                 {% endfor %}
 
             </div>
         </section>
-<<<<<<< HEAD
 
         <section class="videoSchedule__section">
             <h3>Schedule</h3>
@@ -94,8 +56,3 @@
     </div>
     {{ include('SfWebAppFrontOfficeBundle::footer.html.twig') }}
 {% endblock %}
-=======
-    </div>
-{% endblock %}
->>>>>>> parent of 825f804... Merge branch 'develop' of https://github.com/armandfardeau/symfonyTV into develop
->>>>>>> 5370a328d4de7c27011f0f593427c51a96fb60a6

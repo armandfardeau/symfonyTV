@@ -3,7 +3,6 @@
 @import 'core/typo'
 @import 'core/mixins'
 @import 'core/fonts'
-<<<<<<< HEAD
 
 .container
     max-width: 65em
@@ -66,41 +65,63 @@ footer
 
     li
         position: relative
-        display: inline-block
-        padding-left: 2.25em
         list-style: disc
         list-style-position: inside
 
-        &::before
-            content: ''
-            position: absolute
-            top: 50%
-            left: 10px
-            width: 2px
-            height: 2px
-            background-color: #fff
+    .sectionLiensFooter
 
-            transform: translate(-50%, -50%)
+        &__live
+            flex-grow: 1
 
-    .sectionLiensFooter__sectionName
-        font-size: 1.5rem
-        margin-bottom: 0.67em
+        &__news
+            flex-grow: 1
 
-.sectionLiensFooterLine1
-    margin-bottom: 50px
+        &__schedule
+            flex-grow: 0
+
+        &__sectionName
+            font-size: 1.5rem
+            margin-bottom: 0.67em
 
 .sectionLiensFooterLine1, .sectionLiensFooterLine2
     display: flex
     flex-direction: row
     flex-wrap: wrap
+
+.sectionLiensFooterLine1
+    margin-bottom: 50px
     justify-content: space-between
 
+.sectionLiensFooterLine2
+    justify-content: center
+
+    .sectionLiensFooter
+
+        &__account
+            flex-grow: 1
+
+        &__informations
+            flex-grow: 1
+            transform: translateX(-54px)
+
 .generalConditions
+    color: #fff
+    background-color: #202020
+
+    p
+        font-family: 'montserratLight'
+        margin-bottom: 0
+
+    &__projectName
+        text-align: center
+
+    &__legacy
+        text-align: right
+
+
+.generalConditions__container
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: space-between
     align-content: center
-    background-color: #202020
-=======
->>>>>>> 5370a328d4de7c27011f0f593427c51a96fb60a6
