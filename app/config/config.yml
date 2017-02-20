@@ -76,3 +76,8 @@ vich_uploader:
         product_image:
             uri_prefix:         /images/products
             upload_destination: '%kernel.root_dir%/../web/images/products'
+
+        Videos:
+                    uri_prefix:         /videos
+                    upload_destination: '%kernel.root_dir%/../web/videos'
+

@@ -10,6 +10,14 @@
                 <td>{{ video.id }}</td>
             </tr>
             <tr>
+                <th>Name</th>
+                <td><video controls>
+                        <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/mp4">
+                        <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/ogg">
+                        Your browser does not support HTML5 video.
+                    </video>
+            </tr>
+            <tr>
                 <th>Title</th>
                 <td>{{ video.title }}</td>
             </tr>
@@ -40,10 +48,6 @@
             <tr>
                 <th>Thumbnail</th>
                 <td>{{ video.thumbnail }}</td>
-            </tr>
-            <tr>
-                <th>Url</th>
-                <td>{{ video.url }}</td>
             </tr>
         </tbody>
     </table>

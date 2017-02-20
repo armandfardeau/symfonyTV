@@ -3,13 +3,18 @@
 namespace SfWebApp\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * Videos
  *
  * @ORM\Table(name="videos")
  * @ORM\Entity(repositoryClass="SfWebApp\MainBundle\Repository\VideosRepository")
- */
+ * @Vich\Uploadable
+ **/
+
 class Videos
 {
     /**
@@ -78,17 +83,47 @@ class Videos
     private $thumbnail;
 
     /**
-     * @var string
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
-     * @ORM\Column(name="url", type="string", length=255, nullable=true)
+     * @Vich\UploadableField(mapping="Videos", fileNameProperty="videoName")
+     *
+     * @var File
      */
-    private $url;
+    private $videoFile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     *
+     * @var string
+     */
+    private $videoName;
+
+    /**
+     * @ORM\Column(type="datetime")
+     *
+     * @var \DateTime
+     */
+    private $updatedAt;
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt(): \DateTime
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt(\DateTime $updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
 
 
     /**
-     * Get id
-     *
-     * @return integer
+     * @return mixed
      */
     public function getId()
     {
@@ -96,26 +131,64 @@ class Videos
     }
 
     /**
-     * Set uuid
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+
+    /**
+     * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
+     * of 'UploadedFile' is injected into this setter to trigger the  update. If this
+     * bundle's configuration parameter 'inject_on_load' is set to 'true' this setter
+     * must be able to accept an instance of 'File' as the bundle will inject one here
+     * during Doctrine hydration.
      *
-     * @param integer $uuid
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $video
+     *
      * @return Videos
      */
-    public function setUuid($uuid)
+    public function setVideoFile(File $video = null)
     {
-        $this->uuid = $uuid;
+        $this->videoFile = $video;
+
+        if ($video) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->updatedAt = new \DateTimeImmutable();
+        }
 
         return $this;
     }
 
     /**
-     * Get uuid
-     *
-     * @return integer
+     * @return File|null
      */
-    public function getUuid()
+    public function getVideoFile()
     {
-        return $this->uuid;
+        return $this->videoFile;
+    }
+
+    /**
+     * @param string $videoName
+     *
+     * @return Videos
+     */
+    public function setVideoName($videoName)
+    {
+        $this->videoName = $videoName;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getVideoName()
+    {
+        return $this->videoName;
     }
 
     /**
@@ -124,7 +197,8 @@ class Videos
      * @param string $title
      * @return Videos
      */
-    public function setTitle($title)
+    public
+    function setTitle($title)
     {
         $this->title = $title;
 
@@ -136,7 +210,8 @@ class Videos
      *
      * @return string
      */
-    public function getTitle()
+    public
+    function getTitle()
     {
         return $this->title;
     }
@@ -147,7 +222,8 @@ class Videos
      * @param integer $channel
      * @return Videos
      */
-    public function setChannel($channel)
+    public
+    function setChannel($channel)
     {
         $this->channel = $channel;
 
@@ -159,7 +235,8 @@ class Videos
      *
      * @return integer
      */
-    public function getChannel()
+    public
+    function getChannel()
     {
         return $this->channel;
     }
@@ -170,7 +247,8 @@ class Videos
      * @param \DateTime $date
      * @return Videos
      */
-    public function setDate($date)
+    public
+    function setDate($date)
     {
         $this->date = $date;
 
@@ -182,7 +260,8 @@ class Videos
      *
      * @return \DateTime
      */
-    public function getDate()
+    public
+    function getDate()
     {
         return $this->date;
     }
@@ -193,7 +272,8 @@ class Videos
      * @param \DateTime $timeStart
      * @return Videos
      */
-    public function setTimeStart($timeStart)
+    public
+    function setTimeStart($timeStart)
     {
         $this->timeStart = $timeStart;
 
@@ -205,7 +285,8 @@ class Videos
      *
      * @return \DateTime
      */
-    public function getTimeStart()
+    public
+    function getTimeStart()
     {
         return $this->timeStart;
     }
@@ -216,7 +297,8 @@ class Videos
      * @param \DateTime $timeEnd
      * @return Videos
      */
-    public function setTimeEnd($timeEnd)
+    public
+    function setTimeEnd($timeEnd)
     {
         $this->timeEnd = $timeEnd;
 
@@ -228,7 +310,8 @@ class Videos
      *
      * @return \DateTime
      */
-    public function getTimeEnd()
+    public
+    function getTimeEnd()
     {
         return $this->timeEnd;
     }
@@ -239,7 +322,8 @@ class Videos
      * @param integer $category
      * @return Videos
      */
-    public function setCategory($category)
+    public
+    function setCategory($category)
     {
         $this->category = $category;
 
@@ -251,7 +335,8 @@ class Videos
      *
      * @return integer
      */
-    public function getCategory()
+    public
+    function getCategory()
     {
         return $this->category;
     }
@@ -262,7 +347,8 @@ class Videos
      * @param string $excerpt
      * @return Videos
      */
-    public function setExcerpt($excerpt)
+    public
+    function setExcerpt($excerpt)
     {
         $this->excerpt = $excerpt;
 
@@ -274,7 +360,8 @@ class Videos
      *
      * @return string
      */
-    public function getExcerpt()
+    public
+    function getExcerpt()
     {
         return $this->excerpt;
     }
@@ -285,7 +372,8 @@ class Videos
      * @param string $thumbnail
      * @return Videos
      */
-    public function setThumbnail($thumbnail)
+    public
+    function setThumbnail($thumbnail)
     {
         $this->thumbnail = $thumbnail;
 
@@ -297,31 +385,9 @@ class Videos
      *
      * @return string
      */
-    public function getThumbnail()
+    public
+    function getThumbnail()
     {
         return $this->thumbnail;
-    }
-
-    /**
-     * Set url
-     *
-     * @param string $url
-     * @return Videos
-     */
-    public function setUrl($url)
-    {
-        $this->url = $url;
-
-        return $this;
-    }
-
-    /**
-     * Get url
-     *
-     * @return string
-     */
-    public function getUrl()
-    {
-        return $this->url;
     }
 }
