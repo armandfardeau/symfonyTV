@@ -5,6 +5,7 @@ namespace SfWebApp\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -88,6 +89,9 @@ class Videos
      * @Vich\UploadableField(mapping="Videos", fileNameProperty="videoName")
      *
      * @var File
+     * @Assert\File(maxSize="250M")
+     * mimeTypes = {"video/mp4", "video/ogg"},
+     * mimeTypesMessage = "Please upload a valid video"
      */
     private $videoFile;
 

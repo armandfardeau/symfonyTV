@@ -73,13 +73,11 @@ vich_uploader:
     db_driver: orm
 
     mappings:
-        product_image:
-            uri_prefix:         /images/products
-            upload_destination: '%kernel.root_dir%/../web/images/products'
-
         Videos:
-                    uri_prefix:         /videos
-                    upload_destination: '%kernel.root_dir%/../web/videos'
+            namer:
+                vich_uploader.namer_uniqid
+            uri_prefix:         /videos
+            upload_destination: '%kernel.root_dir%/../web/videos'
 
 
 #fos User Config

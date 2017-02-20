@@ -26,6 +26,11 @@ class User extends BaseUser
      */
     protected $id;
 
+    /*
+     *
+     * */
+    protected $favorited;
+
     /**
      * @var
      *
