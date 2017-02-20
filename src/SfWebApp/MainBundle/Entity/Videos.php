@@ -11,7 +11,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Videos
  *
- * @ORM\Table(name="videos")
+ * @ORM\Table(name="Videos")
  * @ORM\Entity(repositoryClass="SfWebApp\MainBundle\Repository\VideosRepository")
  * @Vich\Uploadable
  **/
@@ -35,7 +35,7 @@ class Videos
 
     /**
      * Many Videos have Many Users.
-     * @ORM\ManyToMany(targetEntity="User", mappedBy="videos")
+     * @ORM\ManyToMany(targetEntity="User", mappedBy="Videos")
      */
     private $users;
 

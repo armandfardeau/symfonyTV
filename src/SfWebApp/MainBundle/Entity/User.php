@@ -28,8 +28,8 @@ class User extends BaseUser
 
     /**
      * Many Users have Many Videos.
-     * @ORM\ManyToMany(targetEntity="videos", inversedBy="users")
-     * @ORM\JoinTable(name="users_videos")
+     * @ORM\ManyToMany(targetEntity="Videos", inversedBy="Users")
+     * @ORM\JoinTable(name="Users_videos")
      */
     private $videos;
 

@@ -76,7 +76,7 @@ vich_uploader:
         Videos:
             namer:
                 vich_uploader.namer_uniqid
-            uri_prefix:         /videos
+            uri_prefix:         /Videos
             upload_destination: '%kernel.root_dir%/../web/videos'
 
 
