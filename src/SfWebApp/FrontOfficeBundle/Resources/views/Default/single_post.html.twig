@@ -1,0 +1,21 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    {{ include('SfWebAppFrontOfficeBundle::menu.html.twig') }}
+<div class="container">
+        <section class="videoLive__section">
+            <h3>Live</h3>
+            <div class="videoLive__container">
+                    <article class="videoLive">
+                        <div class="videoLive__thumbnail">
+                            <p class="videoLive__channel">Octopus #{{ video.getChannel + 1 }}</p>
+                            <img class="videoLive__img" src="{{ video.getThumbnail }}">
+                        </div>
+                        <div class="videoLive__duration">
+                            <div class="videoLive__progress"></div>
+                        </div>
+                        <div class="videoLive__infos">
+                            <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
+                            <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
+                        </div>
+                    </article>
+{% endblock %}
