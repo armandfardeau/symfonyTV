@@ -26,10 +26,13 @@ class User extends BaseUser
      */
     protected $id;
 
-    /*
-     *
-     * */
-    protected $favorited;
+    /**
+     * Many Users have Many Videos.
+     * @ORM\ManyToMany(targetEntity="videos", inversedBy="users")
+     * @ORM\JoinTable(name="users_videos")
+     */
+    private $videos;
+
 
     /**
      * @var
@@ -43,6 +46,7 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
+        $this->videos = new \Doctrine\Common\Collections\ArrayCollection();
 
     }
 
