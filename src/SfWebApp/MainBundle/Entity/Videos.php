@@ -32,13 +32,7 @@ class Videos
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
-
-    /**
-     * Many Videos have Many Users.
-     * @ORM\ManyToMany(targetEntity="User", mappedBy="Videos")
-     *
-     */
-    private $users;
+    
 
     public function __construct()
     {
