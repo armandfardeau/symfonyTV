@@ -24,7 +24,7 @@ class Videos
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -33,11 +33,6 @@ class Videos
      */
     private $title;
 
-    /**
-     * Many Videos have Many Users.
-     * @ORM\ManyToMany(targetEntity="User", mappedBy="Videos")
-     */
-    private $users;
 
     public function __construct()
     {

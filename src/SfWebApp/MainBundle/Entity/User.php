@@ -18,21 +18,13 @@ class User extends BaseUser
     const ROLE_USER = 'ROLE_USER';
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
-    /**
-     * Many Users have Many Videos.
-     * @ORM\ManyToMany(targetEntity="Videos", inversedBy="Users")
-     * @ORM\JoinTable(name="Users_videos")
-     */
-    private $videos;
-
 
     /**
      * @var

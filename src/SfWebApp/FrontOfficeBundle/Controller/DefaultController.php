@@ -6,6 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichFileType;
+
 class DefaultController extends Controller
 {
     /**
@@ -15,7 +20,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $videos = $em->getRepository('SfWebAppMainBundle:videos')->findAll();
+        $videos = $em->getRepository('SfWebAppMainBundle:Videos')->findAll();
 
         return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig',
             array(
