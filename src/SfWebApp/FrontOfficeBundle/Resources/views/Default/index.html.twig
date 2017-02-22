@@ -25,6 +25,7 @@
                             <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
                             <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
                         </div>
+                        <a href="{{ path('single_post', {'title': video.getTitle }) }}">View more</a>
                     </article>
                 {% endfor %}
 

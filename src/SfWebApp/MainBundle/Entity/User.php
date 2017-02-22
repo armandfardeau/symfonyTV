@@ -38,7 +38,6 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        $this->videos = new \Doctrine\Common\Collections\ArrayCollection();
 
     }
 

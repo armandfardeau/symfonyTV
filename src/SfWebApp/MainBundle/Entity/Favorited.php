@@ -89,4 +89,11 @@ class Favorited
     {
         return $this->videoId;
     }
+
+    /**
+     * @return $string
+     */
+    public function __toString(){
+        return "";
+    }
 }

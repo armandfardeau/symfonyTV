@@ -1,3 +1,7 @@
+sf_web_app_main_favorited:
+    resource: "@SfWebAppMainBundle/Controller/FavoritedController.php"
+    type:     annotation
+
 sf_web_app_front_office:
     resource: "@SfWebAppFrontOfficeBundle/Controller/"
     type:     annotation
