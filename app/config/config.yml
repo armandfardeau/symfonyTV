@@ -82,7 +82,7 @@ vich_uploader:
 fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
-    user_class: SfWebApp\AppBundle\Entity\User
+    user_class: SfWebApp\MainBundle\Entity\User
     from_email:
         address:  registration@example.com
         sender_name: Demo registration
