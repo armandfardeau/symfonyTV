@@ -5,16 +5,16 @@ namespace SfWebApp\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
  * Videos
  *
- * @ORM\Table(name="videos")
+ * @ORM\Table(name="Videos")
  * @ORM\Entity(repositoryClass="SfWebApp\MainBundle\Repository\VideosRepository")
  * @Vich\Uploadable
  **/
-
 class Videos
 {
     /**
@@ -32,6 +32,19 @@ class Videos
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
+
+    /**
+     * Many Videos have Many Users.
+     * @ORM\ManyToMany(targetEntity="User", mappedBy="Videos")
+     *
+     */
+    private $users;
+
+    public function __construct()
+    {
+
+    }
+
 
     /**
      * @var int
@@ -88,6 +101,9 @@ class Videos
      * @Vich\UploadableField(mapping="Videos", fileNameProperty="videoName")
      *
      * @var File
+     * @Assert\File(maxSize="250M")
+     * mimeTypes = {"video/mp4", "video/ogg"},
+     * mimeTypesMessage = "Please upload a valid video"
      */
     private $videoFile;
 

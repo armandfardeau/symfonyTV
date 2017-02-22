@@ -47,7 +47,7 @@ class UsersController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
-            $em->flush($user);
+            $em->flush();
 
             return $this->redirectToRoute('users_show', array('id' => $user->getId()));
         }
@@ -64,7 +64,7 @@ class UsersController extends Controller
      * @Route("/{id}", name="users_show")
      * @Method("GET")
      */
-    public function showAction(Users $user)
+    public function showAction(User $user)
     {
         $deleteForm = $this->createDeleteForm($user);
 
@@ -80,7 +80,7 @@ class UsersController extends Controller
      * @Route("/{id}/edit", name="users_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Users $user)
+    public function editAction(Request $request, User $user)
     {
         $deleteForm = $this->createDeleteForm($user);
         $editForm = $this->createForm('SfWebApp\MainBundle\Form\UsersType', $user);
@@ -105,7 +105,7 @@ class UsersController extends Controller
      * @Route("/{id}", name="users_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Users $user)
+    public function deleteAction(Request $request, User $user)
     {
         $form = $this->createDeleteForm($user);
         $form->handleRequest($request);
@@ -126,7 +126,7 @@ class UsersController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Users $user)
+    private function createDeleteForm(User $user)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('users_delete', array('id' => $user->getId())))

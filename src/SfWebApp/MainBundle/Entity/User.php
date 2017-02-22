@@ -18,7 +18,7 @@ class User extends BaseUser
     const ROLE_USER = 'ROLE_USER';
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
