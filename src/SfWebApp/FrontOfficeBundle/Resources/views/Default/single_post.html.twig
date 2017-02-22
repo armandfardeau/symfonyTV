@@ -10,6 +10,10 @@
                         <p class="videoLive__channel">Octopus #{{ video.getChannel + 1 }}</p>
                         <img class="videoLive__img" src="{{ video.getThumbnail }}">
                     </div>
+                    <video width="200" controls>
+                        <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/mp4">
+                        <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/ogg">
+                    </video>
                     <div class="videoLive__duration">
                         <div class="videoLive__progress"></div>
                     </div>
