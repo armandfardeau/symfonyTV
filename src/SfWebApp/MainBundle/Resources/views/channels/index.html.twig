@@ -3,43 +3,43 @@
 
 {% block body %}
     {{ include('@SfWebAppMain/menu.html.twig') }}
-    <h1>Channels list</h1>
+    <div class="container">
+        <h1>Channels list</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Uuid</th>
-            <th>Title</th>
-            <th>Cssclass</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for channel in channels %}
+        <table>
+            <thead>
             <tr>
-                <td><a href="{{ path('channels_show', { 'id': channel.id }) }}">{{ channel.id }}</a></td>
-                <td>{{ channel.uuid }}</td>
-                <td>{{ channel.title }}</td>
-                <td>{{ channel.cssClass }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('channels_show', { 'id': channel.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('channels_edit', { 'id': channel.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Cssclass</th>
+                <th>Actions</th>
             </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for channel in channels %}
+                <tr>
+                    <td><a href="{{ path('channels_show', { 'id': channel.id }) }}">{{ channel.id }}</a></td>
+                    <td>{{ channel.title }}</td>
+                    <td>{{ channel.cssClass }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a class="btn--show" href="{{ path('channels_show', { 'id': channel.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a class="btn--edit" href="{{ path('channels_edit', { 'id': channel.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('channels_new') }}">Create a new channel</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a class="btn--new" href="{{ path('channels_new') }}">Create a new channel</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
