@@ -1,55 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Favoriteds list</h1>
+{{ include('@SfWebAppMain/menu.html.twig') }}
+    <div class="container">
+        <h1>Favorited list</h1>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Cssclass</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for favorited in favoriteds %}
+        <table>
+            <thead>
             <tr>
-                <td>
-                    <a href="{{ path('admin_favorited_show', { 'id': favorited.id }) }}">{{ favorited.id }}</a>
-                </td>
-
-
-                <td>{{ favorited.id }}</td>
-
-
-                <th>User id</th>
-                <td>{{ favorited.userId.id }}</td>
-
-
-                <th>Video id</th>
-                <td>{{ favorited.videoId.id }}</td>
-
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('admin_favorited_show', { 'id': favorited.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('admin_favorited_edit', { 'id': favorited.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Cssclass</th>
+                <th>Actions</th>
             </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for favorited in favoriteds %}
+                <tr>
+                    <td>
+                        <a href="{{ path('admin_favorited_show', { 'id': favorited.id }) }}">{{ favorited.id }}</a>
+                    </td>
+
+
+                    <td>{{ favorited.id }}</td>
+
+
+                    <th>User id</th>
+                    <td>{{ favorited.userId.id }}</td>
+
+
+                    <th>Video id</th>
+                    <td>{{ favorited.videoId.id }}</td>
+
+                    <td>
+                        <ul>
+                            <li>
+                                <a class="btn--show" href="{{ path('admin_favorited_show', { 'id': favorited.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a class="btn--edit" href="{{ path('admin_favorited_edit', { 'id': favorited.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
 
 
-    <ul>
-        <li>
-            <a href="{{ path('admin_favorited_new') }}">Create a new favorited</a>
-        </li>
-    </ul>
+        <ul>
+            <li>
+                <a class="btn--new" href="{{ path('admin_favorited_new') }}">Create a new favorited</a>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
