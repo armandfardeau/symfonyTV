@@ -3,7 +3,7 @@
 namespace SfWebApp\MainBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Entity\User as BaseUser;
+use FOS\UserBundle\Model\User as BaseUser;
 
 /**
  * Class User
@@ -25,6 +25,7 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
 
     /**
      * @var

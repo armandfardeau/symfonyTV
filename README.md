@@ -13,21 +13,34 @@
 
 ####Quick start
 
-Clone the repo: ```git clone git@github.com:whatever folder-name```
+Clone the repo: 
+```git clone git@github.com:whatever folder-name```
 
- Composer: ```composer install```
+Composer: 
+ ```composer install```
 
-Open file: ```open app/config/parameters```
+Open file:
+ ```open app/config/parameters```
 
-Verify connexion: ```check database connexion```
+Verify connexion:
+ ```check database connexion```
 
-Clear cache: ```php app/console cache:clear```
+Clear cache:
+```php app/console cache:clear```
 
-Create database: ```php app/console doctrine:database:create```
+Create database: 
+```php app/console doctrine:database:create```
 
-Update: ```php app/console doctrine:schema:update```
+Update: 
+```php app/console doctrine:schema:update --force```
 
+Create a user: 
+```php app/console fos:user:create testuser test@example.com p@ssword```
 
+Promote this user SUPER admin:
+```php app/console fos:user:promote testuser --super```
+
+Enjoy !
 ---
 
 <div id='id-section2'/>
