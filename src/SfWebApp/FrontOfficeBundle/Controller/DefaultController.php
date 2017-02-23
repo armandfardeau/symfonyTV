@@ -72,4 +72,21 @@ class DefaultController extends Controller
                 'formLike' => $formLike->createView(),
             ));
     }
+
+    /**
+     * @Route("/favoris", name="favorited_by_users")
+     * @Method("GET")
+     */
+    public function favoritedAction(Request $request)
+    {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+
+        $em = $this->getDoctrine()->getManager();
+        $favoris = $em->getRepository('SfWebAppMainBundle:Favorited')->find($user);
+        $videos = $em->getRepository('SfWebAppMainBundle:Videos')->findAll($favoris);
+        return $this->render('SfWebAppFrontOfficeBundle:Default:favoris.html.twig',
+            array(
+                'videos' => $videos,
+            ));
+    }
 }

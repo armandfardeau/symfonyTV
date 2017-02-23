@@ -7,11 +7,6 @@ sf_web_app_front_office:
     type:     annotation
     prefix:   /
 
-sf_web_app_back_office:
-    resource: "@SfWebAppBackOfficeBundle/Controller/"
-    type:     annotation
-    prefix:   /favorited
-
 sf_web_app_main:
     resource: "@SfWebAppMainBundle/Controller/"
     type:     annotation
