@@ -216,6 +216,40 @@ body {
 .octopus-3 .videoSchedule__channelTitle {
   border-bottom: 8px solid #0072BB; }
 
+.header__connect {
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px; }
+
+.header__connect p {
+  font-size: 16px; }
+
+.header__search {
+  background-color: #EBEBEB;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.header__search p {
+  font-size: 16px; }
+
+.search__name {
+  font-size: 36px; }
+
+.header__channels {
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.header__channels p {
+  font-size: 16px; }
+
 footer {
   background-color: #404040;
   color: #fff;
