@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    {{ include('@SfWebAppMain/menu.html.twig') }}
+    <h1>Favsids list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Uuid</th>
+                <th>Userid</th>
+                <th>Videoid</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for favsId in favsIds %}
+            <tr>
+                <td><a href="{{ path('favsid_show', { 'id': favsId.id }) }}">{{ favsId.id }}</a></td>
+                <td>{{ favsId.uuid }}</td>
+                <td>{{ favsId.userId }}</td>
+                <td>{{ favsId.videoId }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('favsid_show', { 'id': favsId.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('favsid_edit', { 'id': favsId.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('favsid_new') }}">Create a new favsId</a>
+        </li>
+    </ul>
+{% endblock %}

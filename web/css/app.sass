@@ -1,0 +1,188 @@
+@import 'core/reset'
+@import 'core/variables'
+@import 'core/typo'
+@import 'core/mixins'
+@import 'core/fonts'
+
+.container
+    max-width: 65em
+    margin: 0 auto
+    padding: 20px 0
+
+section
+    margin-bottom: 3.125rem
+
+.videoLive__container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+.videoLive, .videoNews
+    +videoComponent()
+
+// En attente du slider
+.videoNews:nth-child(1), .videoNews:nth-child(2)
+    display: none
+
+.videoNews
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+
+    border: 8px solid $octopus-3
+
+    &__thumbnail
+        width: 60%
+
+    &__infos
+        padding: 60px 50px 80px 60px
+
+    &__infosTitle
+        font-size: 1.5rem
+        margin-bottom: 0.8em
+
+    &__infosExcerpt
+        color: #fff
+        font-family: 'montserratLight'
+        margin-bottom: 1.25em
+
+    &__link
+        color: #fff
+        font-size: 0.875rem
+        text-decoration: underline
+
+body
+    background-image: url('../img/mosaic.png')
+    background-size: 48px 36px
+
+
+.videoSchedule
+
+    &__section h3
+        margin-bottom: 1.2em
+
+    &__container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+
+    &__channel
+        flex-grow: 1
+        margin: 0 10px 20px
+
+    &__channelTitle
+        text-align: center
+
+        h4
+            color: $darkgray
+            font-size: 1.75rem
+            margin-bottom: 0.5em
+
+    &__show
+        padding: 15px 20px
+        background-color: #404040
+        border-bottom: 2px solid #000
+
+        &Time
+            color: $mediumgray
+            font-size: 0.875rem
+            margin-bottom: 0.42em
+
+        &Title
+            color: #fff
+            font-size: 1.125rem
+            margin-bottom: 0
+
+.octopus-1
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-1
+
+.octopus-2
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-2
+
+.octopus-3
+    .videoSchedule__channelTitle
+        border-bottom: 8px solid $octopus-3
+
+footer
+    background-color: #404040
+    color: #fff
+    padding: 50px 0
+
+    li
+        position: relative
+        list-style: disc
+        list-style-position: inside
+
+    .sectionLiensFooter
+
+        &__live
+            flex-grow: 1
+
+        &__news
+            flex-grow: 1
+
+        &__schedule
+            flex-grow: 0
+
+        &__sectionName
+            font-size: 1.5rem
+            margin-bottom: 0.67em
+
+.sectionLiensFooterLine1, .sectionLiensFooterLine2
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+
+.sectionLiensFooterLine1
+    margin-bottom: 50px
+    justify-content: space-between
+
+.sectionLiensFooterLine2
+    justify-content: center
+
+    .sectionLiensFooter
+
+<<<<<<< HEAD
+        &__account,
+            flex-grow: 1
+
+        &__informations,
+=======
+        &__account
+            flex-grow: 1
+
+        &__informations
+>>>>>>> develop
+            flex-grow: 1
+            transform: translateX(-54px)
+
+.generalConditions
+    color: #fff
+    background-color: #202020
+
+    p
+        font-family: 'montserratLight'
+        margin-bottom: 0
+
+    &__projectName
+        text-align: center
+
+    &__legacy
+        text-align: right
+
+
+.generalConditions__container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+<<<<<<< HEAD
+    justify-content: space-between
+=======
+    justify-content: center
+>>>>>>> develop
+    align-content: center

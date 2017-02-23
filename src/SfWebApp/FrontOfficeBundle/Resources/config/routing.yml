@@ -1,7 +1,0 @@
-sf_web_app_front_office_homepage:
-    path:     /
-    defaults: { _controller: SfWebAppFrontOfficeBundle:Default:index }
-
-# SECURITY
-sf_web_app_front_office_security:
-    resource: "@SfWebAppFrontOfficeBundle/Resources/config/routing/security.yml"

@@ -9,8 +9,10 @@ parameters:
     locale: en
 
 framework:
+    serializer:
+        enabled: true
     #esi:             ~
-    translator:      ~
+    translator:   ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -34,6 +36,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        # other form themes
+        - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -65,30 +70,21 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
-
-# FOS User Bundle
-fos_user:
+#Vichu uploader configuration
+vich_uploader:
     db_driver: orm
+
+    mappings:
+        Videos:
+            namer:
+                vich_uploader.namer_uniqid
+            uri_prefix:         /Videos
+            upload_destination: '%kernel.root_dir%/../web/videos'
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: SfWebApp\MainBundle\Entity\User
-    service:
-        mailer: fos_user.mailer.twig_swift
-    registration:
-        form:
-            type: sf_web_app_fos_user_register
-            validation_groups: [Register, Default, Registration]
-        confirmation:
-            enabled: true
-            template: SfWebAppFrontOfficeBundle:Registration:email.html.twig
-    profile:
-        form:
-            type: sf_web_app_fos_user_profile
-            #validation_groups: [Profile, Default]
-    resetting:
-        email:
-            template: SfWebAppFrontOfficeBundle:Resetting:email.html.twig
-    group:
-        group_class: SfWebApp\MainBundle\Entity\Group
     from_email:
-        address: mail@domain.tld
-        sender_name: name
+        address:  registration@example.com
+        sender_name: Demo registration

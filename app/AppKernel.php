@@ -15,16 +15,12 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            //Bundle for entities
             new SfWebApp\MainBundle\SfWebAppMainBundle(),
-            //Bundle for backoffice
-            new SfWebApp\BackOfficeBundle\SfWebAppBackOfficeBundle(),
-            //bundle for my account part of the site
             new SfWebApp\FrontOfficeBundle\SfWebAppFrontOfficeBundle(),
-            //bundle for public part of the site
-            new SfWebApp\CmsBundle\SfWebAppCmsBundle(),
-            //bundle for securely loads users
+            new SfWebApp\BackOfficeBundle\SfWebAppBackOfficeBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new \SfWebApp\APIBundle\SfWebAppAPIBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -39,6 +35,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
