@@ -2,7 +2,7 @@
 
 namespace SfWebApp\MainBundle\Controller;
 
-use SfWebApp\MainBundle\Entity\Users;
+use SfWebApp\MainBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -25,7 +25,7 @@ class UsersController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $users = $em->getRepository('SfWebAppMainBundle:Users')->findAll();
+        $users = $em->getRepository('SfWebAppMainBundle:User')->findAll();
 
         return $this->render('@SfWebAppMain/users/index.html.twig', array(
             'users' => $users,
@@ -40,7 +40,7 @@ class UsersController extends Controller
      */
     public function newAction(Request $request)
     {
-        $user = new Users();
+        $user = new User();
         $form = $this->createForm('SfWebApp\MainBundle\Form\UsersType', $user);
         $form->handleRequest($request);
 

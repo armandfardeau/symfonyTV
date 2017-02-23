@@ -43,6 +43,22 @@ class User extends BaseUser
     }
 
     /**
+     * @return string
+     */
+    public function getUsername()
+    {
+        return parent::getUsername();
+    }
+
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return parent::getEmail();
+    }
+
+    /**
      * @return int
      */
     public function getId(): int
