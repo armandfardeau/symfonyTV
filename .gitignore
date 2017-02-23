@@ -1,4 +1,6 @@
-/web/bundles/
+/web/bundles
+/web/videos
+
 /app/bootstrap.php.cache
 /app/cache/*
 /app/config/parameters.yml
@@ -11,3 +13,7 @@
 /bin/
 /composer.phar
 .idea
+.DS_Store
+.map
+/web/css/.sass-cache
+/web/css/.css.map
