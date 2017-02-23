@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('@SfWebAppMain/menu.html.twig') }}
+    <div class="container">
+        <h1>Users list</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
+                <td>Actions</td>
+            </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td><a href="{{ path('users_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+
+
+                    <td>
+                        <ul>
+                            <li>
+                                <a class="btn--show" href="{{ path('users_show', { 'id': user.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a class="btn--edit" href="{{ path('users_edit', { 'id': user.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <ul>
+            <li>
+                <a class="btn--new" href="{{ path('users_new') }}">Create a new user</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

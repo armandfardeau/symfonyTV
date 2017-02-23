@@ -1,0 +1,35 @@
+=videoComponent($color: $black)
+    background-color: $black
+    margin: 10px
+    flex-grow: 1
+
+    &__thumbnail, .videoLive__thumbnail
+        background-color: $lightgray
+        
+    &__duration
+        height: 8px
+        width: 100%
+        position: relative
+
+        background-color: $mediumgray
+
+    &__progress
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 30%
+
+        background-color: $octopus-1
+
+    &__infos
+
+
+    &__infosSchedule
+        color: $mediumgray
+        font-size: 0.875rem
+
+        margin-bottom: 0.375em
+
+    &__infosTitle
+        color: #fff

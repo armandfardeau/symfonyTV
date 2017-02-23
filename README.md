@@ -1,69 +1,102 @@
-Symfony Standard Edition
-========================
+**SymphonyTV** is a **TV child program**, with a japanese design.  
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+---
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+####Table of contents
 
-What's inside?
---------------
+* [Quick start](#id-section1)
+* [Contributing](#id-section2)
+* [Author](#id-section3)
 
-The Symfony Standard Edition is configured with the following defaults:
+---
+<div id='id-section1'/>
 
-  * An AppBundle you can use to start coding;
+####Quick start
 
-  * Twig as the only configured template engine;
+Clone the repo: 
+```git clone git@github.com:whatever folder-name```
 
-  * Doctrine ORM/DBAL;
+Composer: 
+ ```composer install```
 
-  * Swiftmailer;
+Open file:
+ ```open app/config/parameters```
 
-  * Annotations enabled for everything.
+Verify connexion:
+ ```check database connexion```
 
-It comes pre-configured with the following bundles:
+Clear cache:
+```php app/console cache:clear```
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+Drop database: 
+```php app/console doctrine:database:drop --force```
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+Create database: 
+```php app/console doctrine:database:create```
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+Update: 
+```php app/console doctrine:schema:update --force```
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+Create a user: 
+```php app/console fos:user:create testuser test@example.com p@ssword```
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+Promote this user SUPER admin:
+```php app/console fos:user:promote testuser --super```
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+See routes:
+```php app/console debug:router```
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+Start server:
+```php app/console server:run```
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
 
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
+Enjoy !
+---
 
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
+<div id='id-section2'/>
 
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
+####Contributing
 
-Enjoy!
+The main purpose of this repository is to continue to evolve SymfonyTV, making it faster and easier to use. 
 
-[1]:  https://symfony.com/doc/2.8/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/2.8/doctrine.html
-[8]:  https://symfony.com/doc/2.8/templating.html
-[9]:  https://symfony.com/doc/2.8/security.html
-[10]: https://symfony.com/doc/2.8/email.html
-[11]: https://symfony.com/doc/2.8/logging.html
-[12]: https://symfony.com/doc/2.8/assetic/asset_management.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+---
+
+<div id='id-section3'/>
+
+
+####Authors 
+* ANTHONY Kelly 
+
+LinkedIn : https://goo.gl/UdeXId
+
+GitHub : https://goo.gl/6uK0Bv
+
+* ARFEUILLERE Juliette
+
+LinkedIn : https://goo.gl/3XDdVR
+
+GitHub : https://goo.gl/tFQPWv
+
+* FARDEAU Armand
+
+LinkedIn : https://goo.gl/AzoTvn
+
+GitHub : https://goo.gl/Z0jD92
+
+* GILLET Yann-Edern
+
+LinkedIn : https://goo.gl/CLuUbz
+
+GitHub : https://goo.gl/4GKfqc
+
+* PEROLS Marion
+
+LinkedIn : https://goo.gl/oi8Wv2
+
+GitHub : https://goo.gl/NLBOqw
+
+
+
+
+

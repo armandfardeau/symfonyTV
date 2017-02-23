@@ -1,0 +1,88 @@
+@import 'core/reset'
+@import 'core/variables'
+@import 'core/typo'
+@import 'core/mixins'
+@import 'core/fonts'
+
+body
+    // background-image: none
+
+a
+    color: inherit
+    padding: 0 15px
+    text-decoration: none
+
+.navigator
+    background-color: $darkgray
+    margin-bottom: 20px
+
+    ul
+        text-align: center
+
+    li
+        display: inline-block
+
+        a
+            color: #fff
+            text-transform: uppercase
+
+        a:hover
+            text-decoration: underline
+
+=btn($bgcolor)
+    display: inline-block
+    margin: 10px
+    padding: 0.6em 1.4em
+    text-decoration: none
+    text-transform: capitalize
+    background-color: $bgcolor
+    min-width: 100px
+
+.btn--new
+    +btn($mediumgray)
+
+.btn--edit
+    +btn($octopus-1)
+
+.btn--show
+    +btn($octopus-3)
+
+.btn--delete
+    +btn($octopus-2)
+
+// SHOW
+h1
+    font-size: 2rem
+    margin-bottom: 1.2em
+
+table
+    width: 100%
+    margin-bottom: 20px
+    background-color: #fff
+
+    thead
+        background-color: $lightgray
+
+    thead, tbody, th, tr, td
+        border: 1px solid $mediumgray
+        text-align: left
+
+    th, td
+        padding: 0.2em 0.7em
+        vertical-align: top
+
+    td
+        font-family: 'montserratLight'
+
+    a
+        text-decoration: underline
+
+// EDIT
+label
+    display: block
+
+input
+    height: auto
+    padding: 0.4em !important
+    margin-bottom: 20px !important
+    border: 1px solid $mediumgray

@@ -1,0 +1,117 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+{{ include('SfWebAppFrontOfficeBundle::header.html.twig') }}
+    <div class="container">
+        <section class="videoLive__section">
+            <h3>Live</h3>
+            <div class="videoLive__container">
+                {% for video in videos %}
+                    <article class="videoLive">
+                        <div class="videoLive__thumbnail">
+                            <p class="videoLive__channel">Octopus #{{ video.getChannel + 1 }}</p>
+                            <img class="videoLive__img" src="{{ video.getThumbnail }}">
+
+                        </div>
+                        <video width="200" controls>
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/mp4">
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/ogg">
+                        </video>
+                        <div class="videoLive__duration">
+                            <div class="videoLive__progress"></div>
+                        </div>
+                        <div class="videoLive__infos">
+                            <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
+                            <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+
+
+        <section class="videoNews__section">
+            <h3>News</h3>
+            <div class="videoNews__container">
+                <div class="videoNews__label">
+                    <h4>exclusive episode of Pokémon on friday 14.10.2022 - Octopus #3</h4>
+                </div>
+                <article class="videoNews">
+                    <video width="200" controls>
+                        <video width="200" controls>
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/mp4">
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/ogg">
+                        </video>
+                    <img class="videoNews__img" src="{{ video.getThumbnail }}">
+                    <div class="videoNews__infos">
+                        <p class="videoNews__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
+                        <h4 class="videoNews__infosTitle">{{ video.getTitle }}</h4>
+                        <p class="videoNews__infosExcerpt">{{ video.excerpt }}</p>
+                        <a class="videoNews__link" href="{{ path('single_post', { 'title': video.getTitle }) }}">Learn more ></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="videoSchedule__section">
+            <h3>Schedule</h3>
+            <div class="videoSchedule__container">
+                <div class="videoSchedule__channel octopus-1">
+                    <div class="videoSchedule__channelTitle">
+                        <h4>Octopus #1</h4>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                </div>
+
+                <div class="videoSchedule__channel octopus-2">
+                    <div class="videoSchedule__channelTitle">
+                        <h4>Octopus #2</h4>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                </div>
+
+                <div class="videoSchedule__channel octopus-3">
+                    <div class="videoSchedule__channelTitle">
+                        <h4>Octopus #3</h4>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                    <div class="videoSchedule__show">
+                        <p class="videoSchedule__showTime">Time</p>
+                        <p class="videoSchedule__showTitle">Show</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    {{ include('SfWebAppFrontOfficeBundle::footer.html.twig') }}
+{% endblock %}
