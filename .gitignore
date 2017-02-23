@@ -16,3 +16,4 @@
 .DS_Store
 .map
 /web/css/.sass-cache
+/web/css/.css.map
