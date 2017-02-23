@@ -9,8 +9,10 @@ parameters:
     locale: en
 
 framework:
+    serializer:
+        enabled: true
     #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
+    translator:   ~
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -34,6 +36,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        # other form themes
+        - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -64,3 +69,22 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#Vichu uploader configuration
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        Videos:
+            namer:
+                vich_uploader.namer_uniqid
+            uri_prefix:         /Videos
+            upload_destination: '%kernel.root_dir%/../web/videos'
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: SfWebApp\MainBundle\Entity\User
+    from_email:
+        address:  registration@example.com
+        sender_name: Demo registration

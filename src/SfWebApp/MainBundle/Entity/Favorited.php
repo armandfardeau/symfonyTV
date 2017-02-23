@@ -5,12 +5,12 @@ namespace SfWebApp\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * FavsId
+ * Favorited
  *
- * @ORM\Table(name="favs_id")
- * @ORM\Entity(repositoryClass="SfWebApp\MainBundle\Repository\FavsIdRepository")
+ * @ORM\Table(name="favorited")
+ * @ORM\Entity(repositoryClass="SfWebApp\MainBundle\Repository\FavoritedRepository")
  */
-class FavsId
+class Favorited
 {
     /**
      * @var int
@@ -22,16 +22,14 @@ class FavsId
     private $id;
 
     /**
-     * @var int
+     * @ORM\ManyToOne(targetEntity="User", cascade={"all"}, fetch="EAGER")
      *
-     * @ORM\Column(name="user_id", type="integer")
      */
     private $userId;
 
     /**
-     * @var int
+     * @ORM\ManyToOne(targetEntity="Videos", cascade={"all"}, fetch="EAGER")
      *
-     * @ORM\Column(name="video_id", type="integer")
      */
     private $videoId;
 
@@ -47,33 +45,10 @@ class FavsId
     }
 
     /**
-     * Set uuid
-     *
-     * @param integer $uuid
-     * @return FavsId
-     */
-    public function setUuid($uuid)
-    {
-        $this->uuid = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Get uuid
-     *
-     * @return integer
-     */
-    public function getUuid()
-    {
-        return $this->uuid;
-    }
-
-    /**
      * Set userId
      *
      * @param integer $userId
-     * @return FavsId
+     * @return Favorited
      */
     public function setUserId($userId)
     {
@@ -96,7 +71,7 @@ class FavsId
      * Set videoId
      *
      * @param integer $videoId
-     * @return FavsId
+     * @return Favorited
      */
     public function setVideoId($videoId)
     {
@@ -113,5 +88,12 @@ class FavsId
     public function getVideoId()
     {
         return $this->videoId;
+    }
+
+    /**
+     * @return $string
+     */
+    public function __toString(){
+        return "";
     }
 }

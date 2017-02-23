@@ -33,11 +33,11 @@ class VideosController extends Controller
     }
 
     /**
-     * Creates a new video entity.
-     *
-     * @Route("/new", name="videos_new")
-     * @Method({"GET", "POST"})
-     */
+ * Creates a new video entity.
+ *
+ * @Route("/new", name="videos_new")
+ * @Method({"GET", "POST"})
+ */
     public function newAction(Request $request)
     {
         $video = new Videos();
