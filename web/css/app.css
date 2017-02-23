@@ -60,7 +60,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
   padding: 0;
   text-align: left;
   font-size: 1em;
-  height: 1em;
   vertical-align: middle; }
 
 select, select, select {
@@ -331,7 +330,6 @@ textarea, select, input[type="date"], input[type="datetime"], input[type="dateti
   padding: 0;
   text-align: left;
   font-size: 1em;
-  height: 1em;
   vertical-align: middle; }
 
 select, select, select {
@@ -399,6 +397,42 @@ a {
     .navigator li a:hover {
       text-decoration: underline; }
 
+.btn--new {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #D8D8D8;
+  min-width: 100px; }
+
+.btn--edit {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #FDBE02;
+  min-width: 100px; }
+
+.btn--show {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #0072BB;
+  min-width: 100px; }
+
+.btn--delete {
+  display: inline-block;
+  margin: 10px;
+  padding: 0.6em 1.4em;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: #ED2821;
+  min-width: 100px; }
+
 h1 {
   font-size: 2rem;
   margin-bottom: 1.2em; }
@@ -419,22 +453,13 @@ table {
   table a {
     text-decoration: underline; }
 
-.btn, .btn--new, .btn--edit, .btn--show {
-  display: inline-block;
-  margin: 10px;
-  padding: 0.6em 1.4em;
-  text-decoration: none;
-  text-transform: capitalize;
-  background-color: #EBEBEB;
-  min-width: 100px; }
+label {
+  display: block; }
 
-.btn--new {
-  background-color: #D8D8D8; }
-
-.btn--edit {
-  background-color: #FDBE02; }
-
-.btn--show {
-  background-color: #0072BB; }
+input {
+  height: auto;
+  padding: 0.4em !important;
+  margin-bottom: 20px !important;
+  border: 1px solid #D8D8D8; }
 
 /*# sourceMappingURL=app.css.map */

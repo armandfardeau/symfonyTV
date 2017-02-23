@@ -29,7 +29,28 @@ a
         a:hover
             text-decoration: underline
 
-// EDIT
+=btn($bgcolor)
+    display: inline-block
+    margin: 10px
+    padding: 0.6em 1.4em
+    text-decoration: none
+    text-transform: capitalize
+    background-color: $bgcolor
+    min-width: 100px
+
+.btn--new
+    +btn($mediumgray)
+
+.btn--edit
+    +btn($octopus-1)
+
+.btn--show
+    +btn($octopus-3)
+
+.btn--delete
+    +btn($octopus-2)
+
+// SHOW
 h1
     font-size: 2rem
     margin-bottom: 1.2em
@@ -55,23 +76,12 @@ table
     a
         text-decoration: underline
 
-.btn
-    display: inline-block
-    margin: 10px
-    padding: 0.6em 1.4em
-    text-decoration: none
-    text-transform: capitalize
-    background-color: $lightgray
-    min-width: 100px
+// EDIT
+label
+    display: block
 
-.btn--new
-    @extend .btn
-    background-color: $mediumgray
-
-.btn--edit
-    @extend .btn
-    background-color: $octopus-1
-
-.btn--show
-    @extend .btn
-    background-color: $octopus-3
+input
+    height: auto
+    padding: 0.4em !important
+    margin-bottom: 20px !important
+    border: 1px solid $mediumgray
