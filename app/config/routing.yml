@@ -17,6 +17,11 @@ sf_web_app_main:
     type:     annotation
     prefix:   /admin
 
+sf_web_app_API:
+    resource: "@SfWebAppAPIBundle/Controller/"
+    type:     annotation
+    prefix:   /API
+
 
 
 fos_user_security:
