@@ -28,6 +28,9 @@ Verify connexion:
 Clear cache:
 ```php app/console cache:clear```
 
+Drop database: 
+```php app/console doctrine:database:drop --force```
+
 Create database: 
 ```php app/console doctrine:database:create```
 
@@ -39,6 +42,14 @@ Create a user:
 
 Promote this user SUPER admin:
 ```php app/console fos:user:promote testuser --super```
+
+See routes:
+```php app/console debug:router```
+
+Start server:
+```php app/console server:run```
+
+
 
 Enjoy !
 ---
