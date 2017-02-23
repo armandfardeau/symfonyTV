@@ -25,12 +25,25 @@ section
 .videoNews:nth-child(1), .videoNews:nth-child(2)
     display: none
 
+.videoNews__section
+
+
 .videoNews
     display: flex
     flex-flow: row wrap
     min-height: 400px
     justify-content: space-between
     border: 8px solid $octopus-3
+
+    &__label
+        background-color: #0072BB
+        color: white
+        text-transform: uppercase
+        padding: 0.4em 0.8em
+        display: inline-block
+        position: relative
+        transform: translate(30px, 33px)
+        z-index: 1
 
     &__thumbnail
         width: 60%
@@ -138,6 +151,7 @@ footer
 
         &__schedule
             flex-grow: 0
+            min-width: 8rem
 
         &__sectionName
             font-size: 1.5rem

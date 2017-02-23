@@ -155,6 +155,15 @@ section {
   min-height: 400px;
   justify-content: space-between;
   border: 8px solid #0072BB; }
+  .videoNews__label {
+    background-color: #0072BB;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.4em 0.8em;
+    display: inline-block;
+    position: relative;
+    transform: translate(30px, 33px);
+    z-index: 1; }
   .videoNews__thumbnail {
     width: 60%;
     flex: 2;
@@ -237,7 +246,8 @@ footer {
   footer .sectionLiensFooter__news {
     flex-grow: 1; }
   footer .sectionLiensFooter__schedule {
-    flex-grow: 0; }
+    flex-grow: 0;
+    min-width: 8rem; }
   footer .sectionLiensFooter__sectionName {
     font-size: 1.5rem;
     margin-bottom: 0.67em; }
