@@ -126,8 +126,7 @@ section {
   margin: 10px;
   flex-grow: 1; }
   .videoLive__thumbnail, .videoLive .videoLive__thumbnail, .videoNews__thumbnail, .videoNews .videoLive__thumbnail {
-    background-color: #EBEBEB;
-    padding: 1.25em; }
+    background-color: #EBEBEB; }
   .videoLive__duration, .videoNews__duration {
     height: 8px;
     width: 100%;
@@ -140,8 +139,6 @@ section {
     height: 100%;
     width: 30%;
     background-color: #FDBE02; }
-  .videoLive__infos, .videoNews__infos {
-    padding: 10px 20px 22px 20px; }
   .videoLive__infosSchedule, .videoNews__infosSchedule {
     color: #D8D8D8;
     font-size: 0.875rem;
@@ -154,14 +151,23 @@ section {
 
 .videoNews {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row wrap;
+  min-height: 400px;
   justify-content: space-between;
   border: 8px solid #0072BB; }
   .videoNews__thumbnail {
-    width: 60%; }
+    width: 60%;
+    flex: 2;
+    min-height: 25rem; }
   .videoNews__infos {
-    padding: 60px 50px 80px 60px; }
+    flex: 1;
+    min-width: 17rem;
+    max-width: 20rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 10px; }
   .videoNews__infosTitle {
     font-size: 1.5rem;
     margin-bottom: 0.8em; }
@@ -247,30 +253,34 @@ footer {
   justify-content: center; }
   .sectionLiensFooterLine2 .sectionLiensFooter__account {
     flex-grow: 1; }
+  .sectionLiensFooterLine2 .sectionLiensFooter__informations, .sectionLiensFooterLine2 .sectionLiensFooter__account {
+    flex-grow: 1; }
   .sectionLiensFooterLine2 .sectionLiensFooter__informations {
     flex-grow: 1;
     transform: translateX(-54px); }
 
 .generalConditions {
+  padding: 12px 0;
   color: #fff;
-  background-color: #202020; }
-  .generalConditions p {
-    font-family: "montserratLight";
-    margin-bottom: 0; }
-  .generalConditions__projectName {
-    text-align: center; }
-  .generalConditions__legacy {
-    text-align: right; }
-
-.generalConditions__container {
+  background-color: #202020;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  justify-content: space-between;
-=======
-  justify-content: center;
->>>>>>> develop
-  align-content: center; }
+  align-content: space-between; }
+  .generalConditions__seriesName {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 8%; }
+  .generalConditions__projectName {
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 8%; }
+  .generalConditions__legacy {
+    flex-grow: 1;
+    text-align: right;
+    padding-right: 8%; }
+  .generalConditions p {
+    font-family: "montserratLight";
+    margin-bottom: 0; }
 
 /*# sourceMappingURL=app.css.map */

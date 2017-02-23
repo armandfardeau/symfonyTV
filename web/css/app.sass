@@ -27,17 +27,25 @@ section
 
 .videoNews
     display: flex
-    flex-direction: row
-    flex-wrap: nowrap
+    flex-flow: row wrap
+    min-height: 400px
     justify-content: space-between
-
     border: 8px solid $octopus-3
 
     &__thumbnail
         width: 60%
+        flex: 2
+        min-height: 25rem
 
     &__infos
-        padding: 60px 50px 80px 60px
+        flex: 1
+        min-width: 17rem
+        max-width: 20rem
+        margin: 1rem
+        box-sizing: border-box
+        padding-top: 50px
+        padding-left: 30px
+        padding-right: 10px
 
     &__infosTitle
         font-size: 1.5rem
@@ -147,42 +155,42 @@ footer
 
     .sectionLiensFooter
 
-<<<<<<< HEAD
         &__account,
             flex-grow: 1
 
         &__informations,
-=======
+
         &__account
             flex-grow: 1
 
         &__informations
->>>>>>> develop
             flex-grow: 1
             transform: translateX(-54px)
 
 .generalConditions
+    padding: 12px 0
     color: #fff
     background-color: #202020
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-content: space-between
+
+    &__seriesName
+        flex-grow: 1
+        text-align: left
+        padding-left: 8%
+
+    &__projectName
+        flex-grow: 1
+        text-align: center
+        padding-left: 8%
+
+    &__legacy
+        flex-grow: 1
+        text-align: right
+        padding-right: 8%
 
     p
         font-family: 'montserratLight'
         margin-bottom: 0
-
-    &__projectName
-        text-align: center
-
-    &__legacy
-        text-align: right
-
-
-.generalConditions__container
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-<<<<<<< HEAD
-    justify-content: space-between
-=======
-    justify-content: center
->>>>>>> develop
-    align-content: center
