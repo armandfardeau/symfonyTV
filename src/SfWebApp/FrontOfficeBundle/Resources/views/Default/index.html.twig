@@ -6,7 +6,6 @@
         <section class="videoLive__section">
             <h3>Live</h3>
             <div class="videoLive__container">
-
                 {% for video in videos %}
                     <article class="videoLive">
                         <div class="videoLive__thumbnail">
@@ -25,31 +24,32 @@
                             <p class="videoLive__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
                             <h4 class="videoLive__infosTitle">{{ video.getTitle }}</h4>
                         </div>
-                        <a href="{{ path('single_post', {'title': video.getTitle }) }}">View more</a>
                     </article>
                 {% endfor %}
-
             </div>
         </section>
+
 
         <section class="videoNews__section">
             <h3>News</h3>
             <div class="videoNews__container">
-
-                {% for video in videos %}
-                    <article class="videoNews">
-                        <div class="videoNews__thumbnail">
-                            <img class="videoNews__img" src="{{ video.getThumbnail }}">
-                        </div>
-                        <div class="videoNews__infos">
-                            <p class="videoNews__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
-                            <h4 class="videoNews__infosTitle">{{ video.getTitle }}</h4>
-                            <p class="videoNews__infosExcerpt">{{ video.excerpt }}</p>
-                            <a class="videoNews__link" href="{{ path('single_post', { 'title': video.getTitle }) }}">Learn more ></a>
-                        </div>
-                    </article>
-                {% endfor %}
-
+                <div class="videoNews__label">
+                    <h4>exclusive episode of Pokémon on friday 14.10.2022 - Octopus #3</h4>
+                </div>
+                <article class="videoNews">
+                    <video width="200" controls>
+                        <video width="200" controls>
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/mp4">
+                            <source src="{{ vich_uploader_asset(video, 'videoFile') }}" type="video/ogg">
+                        </video>
+                    <img class="videoNews__img" src="{{ video.getThumbnail }}">
+                    <div class="videoNews__infos">
+                        <p class="videoNews__infosSchedule">{{ video.getTimeStart | date('h:i') }} - {{ video.getTimeEnd | date('h:i') }}</p>
+                        <h4 class="videoNews__infosTitle">{{ video.getTitle }}</h4>
+                        <p class="videoNews__infosExcerpt">{{ video.excerpt }}</p>
+                        <a class="videoNews__link" href="{{ path('single_post', { 'title': video.getTitle }) }}">Learn more ></a>
+                    </div>
+                </article>
             </div>
         </section>
 

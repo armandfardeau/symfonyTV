@@ -27,10 +27,17 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $videos = $em->getRepository('SfWebAppMainBundle:Videos')->findAll();
 
+        $repository = $this->getDoctrine()
+            ->getManager();
 
+// createQueryBuilder() automatically selects FROM AppBundle:Product
+// and aliases it to "p"
+            $video = $repository->createQuery('SELECT p FROM SfWebAppMainBundle:Videos p ORDER By p.id DESC')->setMaxResults(1)->getOneOrNullResult();
+// to get just one result:
         return $this->render('SfWebAppFrontOfficeBundle:Default:index.html.twig',
             array(
                 'videos' => $videos,
+                'video' => $video
             ));
     }
 
