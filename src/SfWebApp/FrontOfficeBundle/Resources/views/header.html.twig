@@ -1,55 +1,35 @@
-<div class="header__connect">
-    <div class="connect__name">
-        <p>SymfonyTV</p>
-    </div>
-    <div class="connect__menu">
-        <p>MyTV/</p>
-        <p>Channel 1</p>
-    </div>
-    <div class="connect__account">
-        <p>Account</p>
-    </div>
-</div>
+<header>
+    <section class="header__connect">
+        <div class="container">
+            <div class="header__connectContainer">
+                <div class="connect__account">
+                    <p>Account</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="header__search">
-    <div class="search__name">
-    </div>
-    <div class="search__searchBar">
-        <p>Search among 11235 videos</p>
-    </div>
-</div>
-<div class="header__channels">
-    <div class="channels__menu">
-        <p>TV Shows</p>
-        <p>Movies</p>
-        <p>Sport</p>
-    </div>
-    <div class="channels__game">
-        <p>Games</p>
-    </div>
-</div>
+    <section class="header__brand">
+        <div class="container">
+            <h1>Octopus<span class="brandActivity">Replay</span></h1>
+        </div>
+    </section>
 
+    <section class="headerChannels">
+        <div class="container">
+            <div class="header__channelsContainer">
+                <div class="header__channelsList">
+                    <div class="channel__item home"></div>
+                    <div class="channel__item octopus--1"></div>
+                    <div class="channel__item octopus--2"></div>
+                    <div class="channel__item octopus--3"></div>
+                </div>
 
-
-<nav>
-    <ul>
-        <li>
-            <a href="{{ path('sfwebapp_frontoffice_default_index') }}">Home</a>
-        </li>
-        <li>
-            <a href="{{ path('favorited_by_users') }}">Favoris</a>
-        </li>
-        <li>
-            <a href="{{ path('fos_user_profile_show' ) }}">Profile</a>
-        </li>
-        <li>
-            <a href="{{ path('fos_user_security_login') }}">Login</a>
-        </li>
-        <li>
-            <a href="{{ path('fos_user_registration_register') }}">Register</a>
-        </li>
-        <li>
-            <a href="{{ path('fos_user_security_logout') }}">Logout</a>
-        </li>
-    </ul>
-</nav>
+                <div class="header__channelsCategories">
+                    <p>TV Shows | Movies | Sport</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="octopod"></div>
+</header>

@@ -1,34 +1,68 @@
+header
+    position: relative
+
+    p
+        margin-bottom: 0
+
 .header__connect
     background-color: $mediumgray
+
+    padding: 10px 0
+
+.header__connectContainer
     display: flex
+    flex-wrap: wrap
     flex-direction: row
-    justify-content: space-between
-    align-items: baseline
-    font-size: 12px
+    align-items: flex-end
+    align-content: space-between
 
-.header__connect p
-    font-size: 16px
+    .connect_name, .connect__account
+        flex-grow: 1
 
-
-.header__search
+.header__brand
+    padding: 25px 0
     background-color: $lightgray
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: baseline
 
-.header__search p
-    font-size: 16px
+    h1
+        font-family: 'montserratLight'
+        font-size: 2.25rem
+        margin-bottom: 0
 
-.search__name
-    font-size: 36px
+        .brandActivity
+            font-family: 'montserratMedium'
 
-.header__channels
+.headerChannels
     background-color: $mediumgray
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    align-items: baseline
+    padding: 10px 0
 
-.header__channels p
-    font-size: 16px
+    .header__channelsContainer
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+
+        p
+            margin-bottom: 0
+
+        .header__channelsList
+
+            .channel__home
+                background-color: $darkgray
+
+            .channel__item
+                width: 50px
+                height: 34px
+                background-color: $darkgray
+                display: inline-block
+                margin: 0 12.5px
+                transform: translateY(4px)
+
+            .octopus--1
+                background-color: $octopus-1
+
+            .octopus--2
+                background-color: $octopus-2
+
+            .octopus--3
+                background-color: $octopus-3

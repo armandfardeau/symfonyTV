@@ -85,6 +85,7 @@ h3 {
   color: #494949;
   font-size: 2.25em;
   text-transform: uppercase;
+  margin-top: 30px;
   margin-bottom: 0.55em; }
 
 .sectionLiensFooter p {
@@ -108,8 +109,7 @@ footer li {
   font-style: normal; }
 .container {
   max-width: 65em;
-  margin: 0 auto;
-  padding: 20px 0; }
+  margin: 0 auto; }
 
 section {
   margin-bottom: 3.125rem; }
@@ -215,44 +215,67 @@ body {
 .octopus-3 .videoSchedule__channelTitle {
   border-bottom: 8px solid #0072BB; }
 
+header {
+  position: relative; }
+  header p {
+    margin-bottom: 0; }
+
 .header__connect {
   background-color: #D8D8D8;
+  padding: 10px 0; }
+
+.header__connectContainer {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  font-size: 12px; }
+  align-items: flex-end;
+  align-content: space-between; }
+  .header__connectContainer .connect_name, .header__connectContainer .connect__account {
+    flex-grow: 1; }
 
-.header__connect p {
-  font-size: 16px; }
+.header__brand {
+  padding: 25px 0;
+  background-color: #EBEBEB; }
+  .header__brand h1 {
+    font-family: "montserratLight";
+    font-size: 2.25rem;
+    margin-bottom: 0; }
+    .header__brand h1 .brandActivity {
+      font-family: "montserratMedium"; }
 
-.header__search {
-  background-color: #EBEBEB;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline; }
-
-.header__search p {
-  font-size: 16px; }
-
-.search__name {
-  font-size: 36px; }
-
-.header__channels {
+.headerChannels {
   background-color: #D8D8D8;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline; }
-
-.header__channels p {
-  font-size: 16px; }
+  padding: 10px 0; }
+  .headerChannels .header__channelsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; }
+    .headerChannels .header__channelsContainer p {
+      margin-bottom: 0; }
+    .headerChannels .header__channelsContainer .header__channelsList .channel__home {
+      background-color: #404040; }
+    .headerChannels .header__channelsContainer .header__channelsList .channel__item {
+      width: 50px;
+      height: 34px;
+      background-color: #404040;
+      display: inline-block;
+      margin: 0 12.5px;
+      transform: translateY(4px); }
+    .headerChannels .header__channelsContainer .header__channelsList .octopus--1 {
+      background-color: #FDBE02; }
+    .headerChannels .header__channelsContainer .header__channelsList .octopus--2 {
+      background-color: #ED2821; }
+    .headerChannels .header__channelsContainer .header__channelsList .octopus--3 {
+      background-color: #0072BB; }
 
 footer {
   background-color: #404040;
   color: #fff;
   padding: 50px 0; }
+  footer .container {
+    padding: 50px 0; }
   footer li {
     position: relative;
     list-style: disc;
@@ -286,7 +309,8 @@ footer {
 
 .generalConditions {
   color: #fff;
-  background-color: #202020; }
+  background-color: #202020;
+  padding: 20px 0; }
   .generalConditions p {
     font-family: "montserratLight";
     margin-bottom: 0; }
@@ -294,13 +318,15 @@ footer {
     text-align: center; }
   .generalConditions__legacy {
     text-align: right; }
+  .generalConditions__seriesName, .generalConditions__projectName, .generalConditions__legacy {
+    padding: 0 20px; }
 
 .generalConditions__container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center; }
+  align-content: space-between; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -389,6 +415,7 @@ h3 {
   color: #494949;
   font-size: 2.25em;
   text-transform: uppercase;
+  margin-top: 30px;
   margin-bottom: 0.55em; }
 
 .sectionLiensFooter p {
@@ -410,9 +437,6 @@ footer li {
   src: url("../fonts/montserrat-lightmontserrat-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
-body {
-  background-image: none; }
-
 a {
   color: inherit;
   padding: 0 15px;
@@ -473,7 +497,8 @@ h1 {
 
 table {
   width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-color: #fff; }
   table thead {
     background-color: #EBEBEB; }
   table thead, table tbody, table th, table tr, table td {

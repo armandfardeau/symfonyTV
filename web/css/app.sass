@@ -7,7 +7,6 @@
 .container
     max-width: 65em
     margin: 0 auto
-    padding: 20px 0
 
 section
     margin-bottom: 3.125rem
@@ -115,6 +114,9 @@ footer
     color: #fff
     padding: 50px 0
 
+    .container
+        padding: 50px 0
+
     li
         position: relative
         list-style: disc
@@ -159,6 +161,7 @@ footer
 .generalConditions
     color: #fff
     background-color: #202020
+    padding: 20px 0
 
     p
         font-family: 'montserratLight'
@@ -170,12 +173,15 @@ footer
     &__legacy
         text-align: right
 
+    &__seriesName, &__projectName, &__legacy
+        padding: 0 20px
+
 
 .generalConditions__container
     display: flex
     flex-direction: row
     flex-wrap: wrap
     justify-content: center
-    align-content: center
+    align-content: space-between
 
 @import 'back'
