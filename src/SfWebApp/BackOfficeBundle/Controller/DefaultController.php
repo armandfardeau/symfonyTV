@@ -7,7 +7,6 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 class DefaultController extends Controller
 {
-
     public function indexAction(Request $request, Videos $video)
     {
         $user = $this->get('security.token_storage')->getToken()->getUser();

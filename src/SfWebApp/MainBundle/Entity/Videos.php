@@ -7,7 +7,6 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
  * Videos
  *
@@ -36,7 +35,6 @@ class Videos
 
     public function __construct()
     {
-
     }
 
 
@@ -207,8 +205,7 @@ class Videos
      * @param string $title
      * @return Videos
      */
-    public
-    function setTitle($title)
+    public function setTitle($title)
     {
         $this->title = $title;
 
@@ -220,8 +217,7 @@ class Videos
      *
      * @return string
      */
-    public
-    function getTitle()
+    public function getTitle()
     {
         return $this->title;
     }
@@ -232,8 +228,7 @@ class Videos
      * @param integer $channel
      * @return Videos
      */
-    public
-    function setChannel($channel)
+    public function setChannel($channel)
     {
         $this->channel = $channel;
 
@@ -245,8 +240,7 @@ class Videos
      *
      * @return integer
      */
-    public
-    function getChannel()
+    public function getChannel()
     {
         return $this->channel;
     }
@@ -257,8 +251,7 @@ class Videos
      * @param \DateTime $date
      * @return Videos
      */
-    public
-    function setDate($date)
+    public function setDate($date)
     {
         $this->date = $date;
 
@@ -270,8 +263,7 @@ class Videos
      *
      * @return \DateTime
      */
-    public
-    function getDate()
+    public function getDate()
     {
         return $this->date;
     }
@@ -282,8 +274,7 @@ class Videos
      * @param \DateTime $timeStart
      * @return Videos
      */
-    public
-    function setTimeStart($timeStart)
+    public function setTimeStart($timeStart)
     {
         $this->timeStart = $timeStart;
 
@@ -295,8 +286,7 @@ class Videos
      *
      * @return \DateTime
      */
-    public
-    function getTimeStart()
+    public function getTimeStart()
     {
         return $this->timeStart;
     }
@@ -307,8 +297,7 @@ class Videos
      * @param \DateTime $timeEnd
      * @return Videos
      */
-    public
-    function setTimeEnd($timeEnd)
+    public function setTimeEnd($timeEnd)
     {
         $this->timeEnd = $timeEnd;
 
@@ -320,8 +309,7 @@ class Videos
      *
      * @return \DateTime
      */
-    public
-    function getTimeEnd()
+    public function getTimeEnd()
     {
         return $this->timeEnd;
     }
@@ -332,8 +320,7 @@ class Videos
      * @param integer $category
      * @return Videos
      */
-    public
-    function setCategory($category)
+    public function setCategory($category)
     {
         $this->category = $category;
 
@@ -345,8 +332,7 @@ class Videos
      *
      * @return integer
      */
-    public
-    function getCategory()
+    public function getCategory()
     {
         return $this->category;
     }
@@ -357,8 +343,7 @@ class Videos
      * @param string $excerpt
      * @return Videos
      */
-    public
-    function setExcerpt($excerpt)
+    public function setExcerpt($excerpt)
     {
         $this->excerpt = $excerpt;
 
@@ -370,8 +355,7 @@ class Videos
      *
      * @return string
      */
-    public
-    function getExcerpt()
+    public function getExcerpt()
     {
         return $this->excerpt;
     }
@@ -382,8 +366,7 @@ class Videos
      * @param string $thumbnail
      * @return Videos
      */
-    public
-    function setThumbnail($thumbnail)
+    public function setThumbnail($thumbnail)
     {
         $this->thumbnail = $thumbnail;
 
@@ -395,8 +378,7 @@ class Videos
      *
      * @return string
      */
-    public
-    function getThumbnail()
+    public function getThumbnail()
     {
         return $this->thumbnail;
     }

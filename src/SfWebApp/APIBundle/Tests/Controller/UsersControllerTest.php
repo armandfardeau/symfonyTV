@@ -19,5 +19,4 @@ class UsersControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/user');
     }
-
 }

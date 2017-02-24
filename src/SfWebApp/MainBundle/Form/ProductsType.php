@@ -7,7 +7,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 
-
 class ProductsType extends AbstractType
 {
     /**
@@ -41,6 +40,4 @@ class ProductsType extends AbstractType
     {
         return 'sfwebapp_mainbundle_products';
     }
-
-
 }

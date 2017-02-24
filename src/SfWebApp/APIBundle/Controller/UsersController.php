@@ -12,7 +12,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 use SfWebApp\MainBundle\Entity\User;
 
-
 class UsersController extends Controller
 {
     /**

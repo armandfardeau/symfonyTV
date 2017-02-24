@@ -33,6 +33,4 @@ class FavoritedType extends AbstractType
     {
         return 'sfwebapp_mainbundle_favorited';
     }
-
-
 }
